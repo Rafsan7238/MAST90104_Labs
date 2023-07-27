@@ -80,3 +80,20 @@ z[1] <- 0
 
 # Last line will not work as z has been removed and does not exist anymore in the environment
 ```
+
+Task 5
+
+```{r}
+i = diag(10)
+i
+```
+
+```{r}
+j = i * 5
+j
+```
+
+```{r}
+i[i != 0] = 5
+i
+```

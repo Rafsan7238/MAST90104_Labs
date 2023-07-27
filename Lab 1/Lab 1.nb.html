@@ -1883,8 +1883,72 @@ z[1] &lt;- 0</code></pre>
 <pre><code>Error in z[1] &lt;- 0 : object &#39;z&#39; not found</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Task 5</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaSA9IGRpYWcoMTApXG5pXG5gYGAifQ== -->
+<pre class="r"><code>i = diag(10)
+i</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgWywxXSBbLDJdIFssM10gWyw0XSBbLDVdIFssNl0gWyw3XSBbLDhdIFssOV0gWywxMF1cbiBbMSxdICAgIDEgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgICAwXG4gWzIsXSAgICAwICAgIDEgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDAgICAgMCAgICAgMFxuIFszLF0gICAgMCAgICAwICAgIDEgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDAgICAgIDBcbiBbNCxdICAgIDAgICAgMCAgICAwICAgIDEgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgICAwXG4gWzUsXSAgICAwICAgIDAgICAgMCAgICAwICAgIDEgICAgMCAgICAwICAgIDAgICAgMCAgICAgMFxuIFs2LF0gICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDEgICAgMCAgICAwICAgIDAgICAgIDBcbiBbNyxdICAgIDAgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDEgICAgMCAgICAwICAgICAwXG4gWzgsXSAgICAwICAgIDAgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDEgICAgMCAgICAgMFxuIFs5LF0gICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDEgICAgIDBcblsxMCxdICAgIDAgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgICAxXG4ifQ== -->
+<pre><code>      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
+ [1,]    1    0    0    0    0    0    0    0    0     0
+ [2,]    0    1    0    0    0    0    0    0    0     0
+ [3,]    0    0    1    0    0    0    0    0    0     0
+ [4,]    0    0    0    1    0    0    0    0    0     0
+ [5,]    0    0    0    0    1    0    0    0    0     0
+ [6,]    0    0    0    0    0    1    0    0    0     0
+ [7,]    0    0    0    0    0    0    1    0    0     0
+ [8,]    0    0    0    0    0    0    0    1    0     0
+ [9,]    0    0    0    0    0    0    0    0    1     0
+[10,]    0    0    0    0    0    0    0    0    0     1</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaiA9IGkgKiA1XG5qXG5gYGAifQ== -->
+<pre class="r"><code>j = i * 5
+j</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgWywxXSBbLDJdIFssM10gWyw0XSBbLDVdIFssNl0gWyw3XSBbLDhdIFssOV0gWywxMF1cbiBbMSxdICAgIDUgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgICAwXG4gWzIsXSAgICAwICAgIDUgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDAgICAgMCAgICAgMFxuIFszLF0gICAgMCAgICAwICAgIDUgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDAgICAgIDBcbiBbNCxdICAgIDAgICAgMCAgICAwICAgIDUgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgICAwXG4gWzUsXSAgICAwICAgIDAgICAgMCAgICAwICAgIDUgICAgMCAgICAwICAgIDAgICAgMCAgICAgMFxuIFs2LF0gICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDUgICAgMCAgICAwICAgIDAgICAgIDBcbiBbNyxdICAgIDAgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDUgICAgMCAgICAwICAgICAwXG4gWzgsXSAgICAwICAgIDAgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDUgICAgMCAgICAgMFxuIFs5LF0gICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDUgICAgIDBcblsxMCxdICAgIDAgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgICA1XG4ifQ== -->
+<pre><code>      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
+ [1,]    5    0    0    0    0    0    0    0    0     0
+ [2,]    0    5    0    0    0    0    0    0    0     0
+ [3,]    0    0    5    0    0    0    0    0    0     0
+ [4,]    0    0    0    5    0    0    0    0    0     0
+ [5,]    0    0    0    0    5    0    0    0    0     0
+ [6,]    0    0    0    0    0    5    0    0    0     0
+ [7,]    0    0    0    0    0    0    5    0    0     0
+ [8,]    0    0    0    0    0    0    0    5    0     0
+ [9,]    0    0    0    0    0    0    0    0    5     0
+[10,]    0    0    0    0    0    0    0    0    0     5</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaVtpICE9IDBdID0gNVxuaVxuYGBgIn0= -->
+<pre class="r"><code>i[i != 0] = 5
+i</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgWywxXSBbLDJdIFssM10gWyw0XSBbLDVdIFssNl0gWyw3XSBbLDhdIFssOV0gWywxMF1cbiBbMSxdICAgIDUgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgICAwXG4gWzIsXSAgICAwICAgIDUgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDAgICAgMCAgICAgMFxuIFszLF0gICAgMCAgICAwICAgIDUgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDAgICAgIDBcbiBbNCxdICAgIDAgICAgMCAgICAwICAgIDUgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgICAwXG4gWzUsXSAgICAwICAgIDAgICAgMCAgICAwICAgIDUgICAgMCAgICAwICAgIDAgICAgMCAgICAgMFxuIFs2LF0gICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDUgICAgMCAgICAwICAgIDAgICAgIDBcbiBbNyxdICAgIDAgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDUgICAgMCAgICAwICAgICAwXG4gWzgsXSAgICAwICAgIDAgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDUgICAgMCAgICAgMFxuIFs5LF0gICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDUgICAgIDBcblsxMCxdICAgIDAgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgIDAgICAgMCAgICAwICAgICA1XG4ifQ== -->
+<pre><code>      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
+ [1,]    5    0    0    0    0    0    0    0    0     0
+ [2,]    0    5    0    0    0    0    0    0    0     0
+ [3,]    0    0    5    0    0    0    0    0    0     0
+ [4,]    0    0    0    5    0    0    0    0    0     0
+ [5,]    0    0    0    0    5    0    0    0    0     0
+ [6,]    0    0    0    0    0    5    0    0    0     0
+ [7,]    0    0    0    0    0    0    5    0    0     0
+ [8,]    0    0    0    0    0    0    0    5    0     0
+ [9,]    0    0    0    0    0    0    0    0    5     0
+[10,]    0    0    0    0    0    0    0    0    0     5</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDEiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMQoKYGBge3J9CnJtKGxpc3QgPSBscygpKQphID0gMQpiID0gMgp4ID0gMwpgYGAKCmBgYHtyfQp6ID0geF4oYV5iKQpgYGAKCmBgYHtyfQp6ID0gKHheYSleYgpgYGAKCmBgYHtyfQp6ID0gKDMqeF4zKSArICgyKnheMikgKyAoNip4KSArIDEKYGBgCgpgYGB7cn0KeCA9IDEyMy4wMQp6ID0gZmxvb3IoeCkKCnogPSB6ICUlIDEwMAp6ID0geiAlLyUgMTAKYGBgCgpgYGB7cn0KeiA9IHogKyAxCmBgYAoKVGFzayAyCgpgYGB7cn0KdmVjMSA9IGMoMSwgMiwgMywgNCwgNSwgNiwgNywgOCwgNywgNiwgNSwgNCwgMywgMiwgMSkKYGBgCgpgYGB7cn0KdmVjMiA9IHJlcCgxOjUsIHRpbWVzID0gMTo1KQp2ZWMyCmBgYAoKYGBge3J9Cm1hdDEgPSBtYXRyaXgoYygwLDEsMSwxLDAsMSwxLDEsMCksIDMsIDMpCm1hdDEKYGBgCgpgYGB7cn0KbWF0MiA9IG1hdHJpeChjKDAsMiwzLDAsNSwwLDcsMCwwKSwgMywgMywgYnlyb3cgPSBUUlVFKQptYXQyCmBgYAoKVGFzayAzCgpgYGB7cn0KdmVjMyA9IDE6MTAwCnZlYzMgPSB2ZWMzWyEodmVjMyAlJSAyID09IDAgfCB2ZWMzICUlIDMgPT0gMCB8IHZlYzMgJSUgNyA9PSAwKV0KCnZlYzMKYGBgCgpUYXNrIDQKCmBgYHtyfQpybShsaXN0ID0gbHMoKSkKeCA8LSAxCnhbM10gPC0gMwp5IDwtIGMoKQp5WzJdIDwtIDIKeVszXSA8LSB5WzFdCnlbMl0gPC0geVs0XQp6WzFdIDwtIDAKCiMgTGFzdCBsaW5lIHdpbGwgbm90IHdvcmsgYXMgeiBoYXMgYmVlbiByZW1vdmVkIGFuZCBkb2VzIG5vdCBleGlzdCBhbnltb3JlIGluIHRoZSBlbnZpcm9ubWVudApgYGAK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDEiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMQoKYGBge3J9CnJtKGxpc3QgPSBscygpKQphID0gMQpiID0gMgp4ID0gMwpgYGAKCmBgYHtyfQp6ID0geF4oYV5iKQpgYGAKCmBgYHtyfQp6ID0gKHheYSleYgpgYGAKCmBgYHtyfQp6ID0gKDMqeF4zKSArICgyKnheMikgKyAoNip4KSArIDEKYGBgCgpgYGB7cn0KeCA9IDEyMy4wMQp6ID0gZmxvb3IoeCkKCnogPSB6ICUlIDEwMAp6ID0geiAlLyUgMTAKYGBgCgpgYGB7cn0KeiA9IHogKyAxCmBgYAoKVGFzayAyCgpgYGB7cn0KdmVjMSA9IGMoMSwgMiwgMywgNCwgNSwgNiwgNywgOCwgNywgNiwgNSwgNCwgMywgMiwgMSkKYGBgCgpgYGB7cn0KdmVjMiA9IHJlcCgxOjUsIHRpbWVzID0gMTo1KQp2ZWMyCmBgYAoKYGBge3J9Cm1hdDEgPSBtYXRyaXgoYygwLDEsMSwxLDAsMSwxLDEsMCksIDMsIDMpCm1hdDEKYGBgCgpgYGB7cn0KbWF0MiA9IG1hdHJpeChjKDAsMiwzLDAsNSwwLDcsMCwwKSwgMywgMywgYnlyb3cgPSBUUlVFKQptYXQyCmBgYAoKVGFzayAzCgpgYGB7cn0KdmVjMyA9IDE6MTAwCnZlYzMgPSB2ZWMzWyEodmVjMyAlJSAyID09IDAgfCB2ZWMzICUlIDMgPT0gMCB8IHZlYzMgJSUgNyA9PSAwKV0KCnZlYzMKYGBgCgpUYXNrIDQKCmBgYHtyfQpybShsaXN0ID0gbHMoKSkKeCA8LSAxCnhbM10gPC0gMwp5IDwtIGMoKQp5WzJdIDwtIDIKeVszXSA8LSB5WzFdCnlbMl0gPC0geVs0XQp6WzFdIDwtIDAKCiMgTGFzdCBsaW5lIHdpbGwgbm90IHdvcmsgYXMgeiBoYXMgYmVlbiByZW1vdmVkIGFuZCBkb2VzIG5vdCBleGlzdCBhbnltb3JlIGluIHRoZSBlbnZpcm9ubWVudApgYGAKClRhc2sgNQoKYGBge3J9CmkgPSBkaWFnKDEwKQppCmBgYAoKYGBge3J9CmogPSBpICogNQpqCmBgYAoKYGBge3J9CmlbaSAhPSAwXSA9IDUKaQpgYGAK</div>
 
 
 
