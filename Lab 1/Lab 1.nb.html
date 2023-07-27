@@ -1865,8 +1865,26 @@ vec3</code></pre>
 [24] 83 85 89 95 97</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Task 4</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucm0obGlzdCA9IGxzKCkpXG54IDwtIDFcbnhbM10gPC0gM1xueSA8LSBjKClcbnlbMl0gPC0gMlxueVszXSA8LSB5WzFdXG55WzJdIDwtIHlbNF1cbnpbMV0gPC0gMFxuYGBgIn0= -->
+<pre class="r"><code>rm(list = ls())
+x &lt;- 1
+x[3] &lt;- 3
+y &lt;- c()
+y[2] &lt;- 2
+y[3] &lt;- y[1]
+y[2] &lt;- y[4]
+z[1] &lt;- 0</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gelsxXSA8LSAwIDogb2JqZWN0ICd6JyBub3QgZm91bmRcbiJ9 -->
+<pre><code>Error in z[1] &lt;- 0 : object &#39;z&#39; not found</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDEiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMQoKYGBge3J9CnJtKGxpc3QgPSBscygpKQphID0gMQpiID0gMgp4ID0gMwpgYGAKCmBgYHtyfQp6ID0geF4oYV5iKQpgYGAKCmBgYHtyfQp6ID0gKHheYSleYgpgYGAKCmBgYHtyfQp6ID0gKDMqeF4zKSArICgyKnheMikgKyAoNip4KSArIDEKYGBgCgpgYGB7cn0KeCA9IDEyMy4wMQp6ID0gZmxvb3IoeCkKCnogPSB6ICUlIDEwMAp6ID0geiAlLyUgMTAKYGBgCgpgYGB7cn0KeiA9IHogKyAxCmBgYAoKVGFzayAyCgpgYGB7cn0KdmVjMSA9IGMoMSwgMiwgMywgNCwgNSwgNiwgNywgOCwgNywgNiwgNSwgNCwgMywgMiwgMSkKYGBgCgpgYGB7cn0KdmVjMiA9IHJlcCgxOjUsIHRpbWVzID0gMTo1KQp2ZWMyCmBgYAoKYGBge3J9Cm1hdDEgPSBtYXRyaXgoYygwLDEsMSwxLDAsMSwxLDEsMCksIDMsIDMpCm1hdDEKYGBgCgpgYGB7cn0KbWF0MiA9IG1hdHJpeChjKDAsMiwzLDAsNSwwLDcsMCwwKSwgMywgMywgYnlyb3cgPSBUUlVFKQptYXQyCmBgYAoKVGFzayAzCgpgYGB7cn0KdmVjMyA9IDE6MTAwCnZlYzMgPSB2ZWMzWyEodmVjMyAlJSAyID09IDAgfCB2ZWMzICUlIDMgPT0gMCB8IHZlYzMgJSUgNyA9PSAwKV0KCnZlYzMKYGBgCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDEiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMQoKYGBge3J9CnJtKGxpc3QgPSBscygpKQphID0gMQpiID0gMgp4ID0gMwpgYGAKCmBgYHtyfQp6ID0geF4oYV5iKQpgYGAKCmBgYHtyfQp6ID0gKHheYSleYgpgYGAKCmBgYHtyfQp6ID0gKDMqeF4zKSArICgyKnheMikgKyAoNip4KSArIDEKYGBgCgpgYGB7cn0KeCA9IDEyMy4wMQp6ID0gZmxvb3IoeCkKCnogPSB6ICUlIDEwMAp6ID0geiAlLyUgMTAKYGBgCgpgYGB7cn0KeiA9IHogKyAxCmBgYAoKVGFzayAyCgpgYGB7cn0KdmVjMSA9IGMoMSwgMiwgMywgNCwgNSwgNiwgNywgOCwgNywgNiwgNSwgNCwgMywgMiwgMSkKYGBgCgpgYGB7cn0KdmVjMiA9IHJlcCgxOjUsIHRpbWVzID0gMTo1KQp2ZWMyCmBgYAoKYGBge3J9Cm1hdDEgPSBtYXRyaXgoYygwLDEsMSwxLDAsMSwxLDEsMCksIDMsIDMpCm1hdDEKYGBgCgpgYGB7cn0KbWF0MiA9IG1hdHJpeChjKDAsMiwzLDAsNSwwLDcsMCwwKSwgMywgMywgYnlyb3cgPSBUUlVFKQptYXQyCmBgYAoKVGFzayAzCgpgYGB7cn0KdmVjMyA9IDE6MTAwCnZlYzMgPSB2ZWMzWyEodmVjMyAlJSAyID09IDAgfCB2ZWMzICUlIDMgPT0gMCB8IHZlYzMgJSUgNyA9PSAwKV0KCnZlYzMKYGBgCgpUYXNrIDQKCmBgYHtyfQpybShsaXN0ID0gbHMoKSkKeCA8LSAxCnhbM10gPC0gMwp5IDwtIGMoKQp5WzJdIDwtIDIKeVszXSA8LSB5WzFdCnlbMl0gPC0geVs0XQp6WzFdIDwtIDAKCiMgTGFzdCBsaW5lIHdpbGwgbm90IHdvcmsgYXMgeiBoYXMgYmVlbiByZW1vdmVkIGFuZCBkb2VzIG5vdCBleGlzdCBhbnltb3JlIGluIHRoZSBlbnZpcm9ubWVudApgYGAK</div>
 
 
 

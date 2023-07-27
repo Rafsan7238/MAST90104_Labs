@@ -65,3 +65,18 @@ vec3 = vec3[!(vec3 %% 2 == 0 | vec3 %% 3 == 0 | vec3 %% 7 == 0)]
 
 vec3
 ```
+
+Task 4
+
+```{r}
+rm(list = ls())
+x <- 1
+x[3] <- 3
+y <- c()
+y[2] <- 2
+y[3] <- y[1]
+y[2] <- y[4]
+z[1] <- 0
+
+# Last line will not work as z has been removed and does not exist anymore in the environment
+```
