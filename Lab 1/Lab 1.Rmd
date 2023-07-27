@@ -2,3 +2,18 @@
 title: "Lab 1"
 output: html_notebook
 ---
+
+Task 1
+
+```{r}
+rm(list = ls())
+a = 1
+b = 2
+x = 3
+```
+
+```{r}
+#1a
+
+z = x^(a^b)
+```
