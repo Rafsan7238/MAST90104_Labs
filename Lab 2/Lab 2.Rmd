@@ -15,6 +15,20 @@ vec1 = 1:500
 vec1 = vec1[vec1 %% 17 == 0]
 ```
 
+Task 2
+
+```{r}
+queue <- c("Steve", "Russell", "Alison", "Liam")
+```
+
+```{r}
+queue = c(queue, 'Barry')
+```
+
+```{r}
+
+```
+
 Task 4
 
 ```{r}
