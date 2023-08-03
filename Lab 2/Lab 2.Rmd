@@ -41,6 +41,10 @@ queue = queue[-length(queue)]
 queue = queue[queue != 'Alison']
 ```
 
+```{r}
+which(queue == 'Russell')
+```
+
 Task 4
 
 ```{r}
