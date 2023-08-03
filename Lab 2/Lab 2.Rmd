@@ -6,3 +6,11 @@ output: html_notebook
 ```{r}
 rm(list = ls())
 ```
+
+Task 1
+
+```{r}
+
+vec1 = 1:500
+vec1 = vec1[vec1 %% 17 == 0]
+```
