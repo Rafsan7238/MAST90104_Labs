@@ -32,3 +32,11 @@ BtA = t(B)%*%A
 AB
 BtA
 ```
+
+```{r}
+detA = det(A)
+rB = rankMatrix(B)
+
+detA
+rB
+```
