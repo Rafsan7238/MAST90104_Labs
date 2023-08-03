@@ -37,6 +37,10 @@ queue = c('Pam', queue)
 queue = queue[-length(queue)]
 ```
 
+```{r}
+queue = queue[queue != 'Alison']
+```
+
 Task 4
 
 ```{r}
