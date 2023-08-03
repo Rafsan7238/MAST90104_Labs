@@ -1822,6 +1822,41 @@ vec1 = vec1[vec1 %% 17 == 0]</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>Task 3</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTmFtZSA9IGMoJ1JvbicsICdTdGV2ZScsICdCYXJyeScsICdMb3Vpc2UnLCAnQW5uJywgJ0tyaXN0ZW4nLCAnRW1tYScpXG5BZ2UgPSBjKDIzLDI0LDIwLDMwLDI1LDI0LDIxKVxuV2FpdGluZ19UaW1lID0gYyg1LDcsMiwzLDUsNCw2KVxuXG5kZiA9IGRhdGEuZnJhbWUoTmFtZSwgQWdlLCBXYWl0aW5nX1RpbWUpXG5cbmRmXG5gYGAifQ== -->
+<pre class="r"><code>Name = c(&#39;Ron&#39;, &#39;Steve&#39;, &#39;Barry&#39;, &#39;Louise&#39;, &#39;Ann&#39;, &#39;Kristen&#39;, &#39;Emma&#39;)
+Age = c(23,24,20,30,25,24,21)
+Waiting_Time = c(5,7,2,3,5,4,6)
+
+df = data.frame(Name, Age, Waiting_Time)
+
+df</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NywibmNvbCI6Mywic3VtbWFyeSI6W119LCJyZGYiOiJINHNJQUFBQUFBQUFBMTFSeTA3RE1CRGM1a0ZvUkVzbE9IRGdGNUlERDFFdUtFWEFCY1NoRk5FYk1xa0pGb2xkT1E2UEcxOWVjSkxkaW1ZbGEzWm52RjZQZG5vMVB3N25JUUM0NERrT3VMNU53WCtjM1VSanNJd3RldUJCdjhZdmUybXZ1UWt3c2lkQXdaMHFpYW4vWVBnSHArS1NhZjJOeGRhZHFrUkpranVSMUJMY2FsRWFUcVYzWFJUTTRyQ1drak5vSWhram5pQmVJSjUzOUZPZ2FQdjNrVDlFUkRIWlJpUjloSGhBN1J2T2Zja0tYcUpybHo1NmI4bTFuWXpTblNjbWpKRFo4MHhZZWZPZHZsYWZNYjAxc01mNWFhY0YzWUZwemtvYVNHUzRZSWJGcjdvZUM3RHF0QVJxYVlTU3RzbXBkK1IzbW51NlEreFdzdjdKSWtyZkt2a2VIZFVER3JtTkFlYkJ2OXh0UnpxLytKUlBxK1V5RTNLOTlaeTk4QnlMb1hYY0dJNlhXa2hEVGl4YnhrWVpSdmZDVk9YRU5ONWc5UWN6L3l0R21nSUFBQT09In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Age"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Waiting_Time"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Ron","2":"23","3":"5"},{"1":"Steve","2":"24","3":"7"},{"1":"Barry","2":"20","3":"2"},{"1":"Louise","2":"30","3":"3"},{"1":"Ann","2":"25","3":"5"},{"1":"Kristen","2":"24","3":"4"},{"1":"Emma","2":"21","3":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[7]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGYgJT4lIGZpbHRlcihXYWl0aW5nX1RpbWUgPT0gbWF4KFdhaXRpbmdfVGltZSkpXG5gYGAifQ== -->
+<pre class="r"><code>df %&gt;% filter(Waiting_Time == max(Waiting_Time))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MSwibmNvbCI6Mywic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbMSDDlyAzXSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVB3VzdDTUF3MVRjUFVha05JWFBjTHJZUjI2WEdURUVjT2cybmNwcXlFRXExTFVCdkd2aDV3UW94b0swVjlmcmJmODN1ZnJWL1NkUW9BRE9Jb0FzWVJBdjlZemJNQ2tNRmlBREVrN3YrUFF4TS9DVEMrYS9DbGxYOFN3Y2lScndYUWQ2MmZxZXlvY1MxK1pSdVVXQ0RqQlpJQnM3ZUs0T09uVUZicDZtdWxzTjNWU1JwenpFbnJ5VGY4NjVxVnRXakpqTWgwSTZ6SXQ0MnpCRGoxVmg3TTNpcWpjU2x5bVhsdmVkRDBpUEZCdXlzMldiazc2SjlzT25VTzRSem9ubmJEN09vWm5ZTVdEMXBEcVN1bEtUMnZ4YmVzUXpIQ3VENXR2bStVdGhRRjJUYTN4Z3FhUzB0VEUrUER3ZWtDblVJRC9Pc0JBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Age"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Waiting_Time"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Steve","2":"24","3":"7"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[1]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <p>Task 4</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
@@ -1898,7 +1933,7 @@ attr(,&quot;tol&quot;)
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDIiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCmBgYHtyfQpybShsaXN0ID0gbHMoKSkKYGBgCgpUYXNrIDEKCmBgYHtyfQoKdmVjMSA9IDE6NTAwCnZlYzEgPSB2ZWMxW3ZlYzEgJSUgMTcgPT0gMF0KYGBgCgpUYXNrIDIKCmBgYHtyfQpxdWV1ZSA8LSBjKCJTdGV2ZSIsICJSdXNzZWxsIiwgIkFsaXNvbiIsICJMaWFtIikKYGBgCgpgYGB7cn0KcXVldWUgPSBjKHF1ZXVlLCAnQmFycnknKQpgYGAKCmBgYHtyfQpxdWV1ZSA9IHF1ZXVlWy0xXQpgYGAKCmBgYHtyfQpxdWV1ZSA9IGMoJ1BhbScsIHF1ZXVlKQpgYGAKCmBgYHtyfQpxdWV1ZSA9IHF1ZXVlWy1sZW5ndGgocXVldWUpXQpgYGAKCmBgYHtyfQpxdWV1ZSA9IHF1ZXVlW3F1ZXVlICE9ICdBbGlzb24nXQpgYGAKCmBgYHtyfQp3aGljaChxdWV1ZSA9PSAnUnVzc2VsbCcpCmBgYAoKVGFzayA0CgpgYGB7cn0KQSA9IG1hdHJpeChjKDIsNCwwLDcsNiw4LDMsMSw0KSwgMywgMywgYnlyb3cgPSBUUlVFKQpCID0gbWF0cml4KGMoMSwwLDIsLTEsLTEsMCw0LDAsMSksIDMsIDMsIGJ5cm93ID0gVFJVRSkKCkEKQgpgYGAKCmBgYHtyfQpBQiA9IEElKiVCCkJ0QSA9IHQoQiklKiVBCgpBQgpCdEEKYGBgCgpgYGB7cn0KZGV0QSA9IGRldChBKQpyQiA9IHJhbmtNYXRyaXgoQikKCmRldEEKckIKYGBgCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDIiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCmBgYHtyfQpybShsaXN0ID0gbHMoKSkKYGBgCgpUYXNrIDEKCmBgYHtyfQoKdmVjMSA9IDE6NTAwCnZlYzEgPSB2ZWMxW3ZlYzEgJSUgMTcgPT0gMF0KYGBgCgpUYXNrIDIKCmBgYHtyfQpxdWV1ZSA8LSBjKCJTdGV2ZSIsICJSdXNzZWxsIiwgIkFsaXNvbiIsICJMaWFtIikKYGBgCgpgYGB7cn0KcXVldWUgPSBjKHF1ZXVlLCAnQmFycnknKQpgYGAKCmBgYHtyfQpxdWV1ZSA9IHF1ZXVlWy0xXQpgYGAKCmBgYHtyfQpxdWV1ZSA9IGMoJ1BhbScsIHF1ZXVlKQpgYGAKCmBgYHtyfQpxdWV1ZSA9IHF1ZXVlWy1sZW5ndGgocXVldWUpXQpgYGAKCmBgYHtyfQpxdWV1ZSA9IHF1ZXVlW3F1ZXVlICE9ICdBbGlzb24nXQpgYGAKCmBgYHtyfQp3aGljaChxdWV1ZSA9PSAnUnVzc2VsbCcpCmBgYAoKVGFzayAzCgpgYGB7cn0KTmFtZSA9IGMoJ1JvbicsICdTdGV2ZScsICdCYXJyeScsICdMb3Vpc2UnLCAnQW5uJywgJ0tyaXN0ZW4nLCAnRW1tYScpCkFnZSA9IGMoMjMsMjQsMjAsMzAsMjUsMjQsMjEpCldhaXRpbmdfVGltZSA9IGMoNSw3LDIsMyw1LDQsNikKCmRmID0gZGF0YS5mcmFtZShOYW1lLCBBZ2UsIFdhaXRpbmdfVGltZSkKCmRmCmBgYAoKYGBge3J9CmRmICU+JSBmaWx0ZXIoV2FpdGluZ19UaW1lID09IG1heChXYWl0aW5nX1RpbWUpKQpgYGAKClRhc2sgNAoKYGBge3J9CkEgPSBtYXRyaXgoYygyLDQsMCw3LDYsOCwzLDEsNCksIDMsIDMsIGJ5cm93ID0gVFJVRSkKQiA9IG1hdHJpeChjKDEsMCwyLC0xLC0xLDAsNCwwLDEpLCAzLCAzLCBieXJvdyA9IFRSVUUpCgpBCkIKYGBgCgpgYGB7cn0KQUIgPSBBJSolQgpCdEEgPSB0KEIpJSolQQoKQUIKQnRBCmBgYAoKYGBge3J9CmRldEEgPSBkZXQoQSkKckIgPSByYW5rTWF0cml4KEIpCgpkZXRBCnJCCmBgYAo=</div>
 
 
 

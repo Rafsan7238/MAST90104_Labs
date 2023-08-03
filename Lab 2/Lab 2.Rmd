@@ -45,6 +45,22 @@ queue = queue[queue != 'Alison']
 which(queue == 'Russell')
 ```
 
+Task 3
+
+```{r}
+Name = c('Ron', 'Steve', 'Barry', 'Louise', 'Ann', 'Kristen', 'Emma')
+Age = c(23,24,20,30,25,24,21)
+Waiting_Time = c(5,7,2,3,5,4,6)
+
+df = data.frame(Name, Age, Waiting_Time)
+
+df
+```
+
+```{r}
+df %>% filter(Waiting_Time == max(Waiting_Time))
+```
+
 Task 4
 
 ```{r}
