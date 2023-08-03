@@ -33,6 +33,10 @@ queue = queue[-1]
 queue = c('Pam', queue)
 ```
 
+```{r}
+queue = queue[-length(queue)]
+```
+
 Task 4
 
 ```{r}
