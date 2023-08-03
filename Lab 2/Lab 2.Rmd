@@ -86,3 +86,18 @@ rB = rankMatrix(B)
 detA
 rB
 ```
+
+Task 5
+
+```{r}
+x1 = c(2,4,1)
+x2 = c(3,0,2)
+x3 = c(5,-4,6)
+
+A = cbind(x1,x2,x3)
+A
+```
+
+```{r}
+z = c(1,2,3)
+```
