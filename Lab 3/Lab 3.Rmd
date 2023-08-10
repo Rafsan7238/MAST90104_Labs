@@ -1,0 +1,17 @@
+---
+title: "Lab 3"
+output: html_notebook
+---
+
+Task 1
+
+```{r}
+if (x <= 0){
+  y = -(x^3)
+} else if (x > 1){
+  y = sqrt(x)
+} else {
+  y = x^2
+}
+
+```
