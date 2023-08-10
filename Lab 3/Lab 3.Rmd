@@ -100,3 +100,17 @@ h_while = function(x, n){
 h_while(0.3, 55)
 h_while(6.6, 8)
 ```
+
+```{r}
+vec = function(x, n){
+  pow = 0:n
+  val = sum(x^pow)
+  
+  return (val)
+}
+```
+
+```{r}
+vec(0.3, 55)
+vec(6.6, 8)
+```
