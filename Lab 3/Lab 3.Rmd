@@ -129,3 +129,8 @@ names(df) = c('Price (x$10k)', 'Age (years)', 'Area (x100m2)')
 ```{r}
 head(df)
 ```
+
+```{r}
+model = lm(df$`Price (x$10k)` ~ df$`Age (years)` + df$`Area (x100m2)`)
+summary(model)
+```
