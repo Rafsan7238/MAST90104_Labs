@@ -55,3 +55,13 @@ h = function(x, n){
   return (val)
 }
 ```
+
+Task 3
+
+```{r}
+geom = function(x, n){
+  val = (1-(x^(n+1))) / (1-x)
+  
+  return (val)
+}
+```
