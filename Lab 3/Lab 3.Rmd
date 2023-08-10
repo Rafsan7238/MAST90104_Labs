@@ -114,3 +114,18 @@ vec = function(x, n){
 vec(0.3, 55)
 vec(6.6, 8)
 ```
+
+Task 5
+
+```{r}
+price = c(50, 40, 52, 47, 65)
+age = c(1, 5, 5, 10, 20)
+area = c(1, 1, 2, 2, 3)
+
+df = data.frame(price, age, area)
+names(df) = c('Price (x$10k)', 'Age (years)', 'Area (x100m2)')
+```
+
+```{r}
+head(df)
+```

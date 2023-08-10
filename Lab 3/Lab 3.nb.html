@@ -1934,8 +1934,35 @@ geom(0.3, 55)</code></pre>
 <pre><code>[1] 4243336</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Task 5</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJpY2UgPSBjKDUwLCA0MCwgNTIsIDQ3LCA2NSlcbmFnZSA9IGMoMSwgNSwgNSwgMTAsIDIwKVxuYXJlYSA9IGMoMSwgMSwgMiwgMiwgMylcblxuZGYgPSBkYXRhLmZyYW1lKHByaWNlLCBhZ2UsIGFyZWEpXG5uYW1lcyhkZikgPSBjKCdQcmljZSAoeCQxMGspJywgJ0FnZSAoeWVhcnMpJywgJ0FyZWEgKHgxMDBtMiknKVxuYGBgIn0= -->
+<pre class="r"><code>price = c(50, 40, 52, 47, 65)
+age = c(1, 5, 5, 10, 20)
+area = c(1, 1, 2, 2, 3)
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDMiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMQoKYGBge3J9CmlmICh4IDw9IDApewogIHkgPSAtKHheMykKfSBlbHNlIGlmICh4ID4gMSl7CiAgeSA9IHNxcnQoeCkKfSBlbHNlIHsKICB5ID0geF4yCn0KCmBgYAoKYGBge3J9CiMgaW5wdXQKeC52YWx1ZXMgPC0gc2VxKC0yLCAyLCBieSA9IDAuMSkKCiMgZm9yIGVhY2ggeCBjYWxjdWxhdGUgeQpuIDwtIGxlbmd0aCh4LnZhbHVlcykKeS52YWx1ZXMgPC0gcmVwKDAsIG4pCgpmb3IgKGkgaW4gMTpuKSB7CiAgeCA8LSB4LnZhbHVlc1tpXQoKICBpZiAoeCA8PSAwKXsKICAgIHkgPSAtKHheMykKICB9IGVsc2UgaWYgKHggPiAxKXsKICAgIHkgPSBzcXJ0KHgpCiAgfSBlbHNlIHsKICAgIHkgPSB4XjIKICB9CgogIHkudmFsdWVzW2ldIDwtIHkKfQoKIyBvdXRwdXQKcGxvdCh4LnZhbHVlcywgeS52YWx1ZXMsIHR5cGUgPSAibCIpCmBgYAoKVGFzayAyCgpgYGB7cn0KaCA9IGZ1bmN0aW9uKHgsIG4pewogIHZhbCA9IDAuMAogIAogIGZvciAoaSBpbiAwOm4pewogICAgdmFsID0gdmFsICsgKHheaSkKICB9CiAgCiAgcmV0dXJuICh2YWwpCn0KYGBgCgpUYXNrIDMKCmBgYHtyfQpnZW9tID0gZnVuY3Rpb24oeCwgbil7CiAgdmFsID0gKDEtKHheKG4rMSkpKSAvICgxLXgpCiAgCiAgcmV0dXJuICh2YWwpCn0KYGBgCgpgYGB7cn0KI0NvbXB1dGUgdXNpbmcgZm9yIGxvb3AKCmgoMC4zLCA1NSkKaCg2LjYsIDgpCmBgYAoKYGBge3J9CiNDb21wdXRlIHVzaW5nIGdlb21ldHJpYyBzdW0KCmdlb20oMC4zLCA1NSkKZ2VvbSg2LjYsIDgpCmBgYAoKVGFzayA0CgpgYGB7cn0KaF93aGlsZSA9IGZ1bmN0aW9uKHgsIG4pewogIHZhbCA9IDAuMAogIGkgPSAwCiAgCiAgd2hpbGUoaSA8PSBuKXsKICAgIHZhbCA9IHZhbCArICh4XmkpCiAgICBpID0gaSArIDEKICB9CiAgCiAgcmV0dXJuICh2YWwpCn0KYGBgCgpgYGB7cn0KaF93aGlsZSgwLjMsIDU1KQpoX3doaWxlKDYuNiwgOCkKYGBgCgpgYGB7cn0KdmVjID0gZnVuY3Rpb24oeCwgbil7CiAgcG93ID0gMDpuCiAgdmFsID0gc3VtKHhecG93KQogIAogIHJldHVybiAodmFsKQp9CmBgYAoKYGBge3J9CnZlYygwLjMsIDU1KQp2ZWMoNi42LCA4KQpgYGAK</div>
+df = data.frame(price, age, area)
+names(df) = c(&#39;Price (x$10k)&#39;, &#39;Age (years)&#39;, &#39;Area (x100m2)&#39;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChkZilcbmBgYCJ9 -->
+<pre class="r"><code>head(df)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NSwibmNvbCI6Mywic3VtbWFyeSI6W119LCJyZGYiOiJINHNJQUFBQUFBQUFBMjFRVFUvQ1FCQWR0cXpLbXFJSi9nQVBIT1RRcHFnSGI1YUVhUFJFakNaYzE3SmlROW1TYllsdzh5ZjdDOURwZmhqWnVNbm16Yng5YnpxdlQrUHBGWnN5QUFpZ1RRZ0VGRXVnTDg5MzBRMGdnMDBMMnRCcGNJT2lubFlDZEJ0VitnRDZwR09ManhidlB3MU9VckJINjIrLzdQdVpoMzJMMS9Ddi90Y0hIaDQ1K2Q2aVZQS2xxTEE0TmJFMEdVNVVub256aTAxL21Dd0dsandlelpIYUNxNHFSNFVqSlRqS2hrbXl2Qng0a3p1cS9JamQ5QkF2TVVHQitpdGtCYS9jQ281a00xN3orRTJoSDd1ZFp6a3NWM1ZlU2pTUm5wbTRaMjRwanpoWnkyYVRXWlM5citVaWFuNGQwOC9taGhicG56b3dueVRmZGhTMW93NkVuT2RTdU4wTC9pb0syM1F4c1E0Y3IxUXVhNWNFMlNxdXk1bzdIY3ZLd2pFNkcreCtBSTdsZlloYkFnQUEifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Price (x$10k)"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Age (years)"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Area (x100m2)"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"50","2":"1","3":"1","_rn_":"1"},{"1":"40","2":"5","3":"1","_rn_":"2"},{"1":"52","2":"5","3":"2","_rn_":"3"},{"1":"47","2":"10","3":"2","_rn_":"4"},{"1":"65","2":"20","3":"3","_rn_":"5"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[5]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDMiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMQoKYGBge3J9CmlmICh4IDw9IDApewogIHkgPSAtKHheMykKfSBlbHNlIGlmICh4ID4gMSl7CiAgeSA9IHNxcnQoeCkKfSBlbHNlIHsKICB5ID0geF4yCn0KCmBgYAoKYGBge3J9CiMgaW5wdXQKeC52YWx1ZXMgPC0gc2VxKC0yLCAyLCBieSA9IDAuMSkKCiMgZm9yIGVhY2ggeCBjYWxjdWxhdGUgeQpuIDwtIGxlbmd0aCh4LnZhbHVlcykKeS52YWx1ZXMgPC0gcmVwKDAsIG4pCgpmb3IgKGkgaW4gMTpuKSB7CiAgeCA8LSB4LnZhbHVlc1tpXQoKICBpZiAoeCA8PSAwKXsKICAgIHkgPSAtKHheMykKICB9IGVsc2UgaWYgKHggPiAxKXsKICAgIHkgPSBzcXJ0KHgpCiAgfSBlbHNlIHsKICAgIHkgPSB4XjIKICB9CgogIHkudmFsdWVzW2ldIDwtIHkKfQoKIyBvdXRwdXQKcGxvdCh4LnZhbHVlcywgeS52YWx1ZXMsIHR5cGUgPSAibCIpCmBgYAoKVGFzayAyCgpgYGB7cn0KaCA9IGZ1bmN0aW9uKHgsIG4pewogIHZhbCA9IDAuMAogIAogIGZvciAoaSBpbiAwOm4pewogICAgdmFsID0gdmFsICsgKHheaSkKICB9CiAgCiAgcmV0dXJuICh2YWwpCn0KYGBgCgpUYXNrIDMKCmBgYHtyfQpnZW9tID0gZnVuY3Rpb24oeCwgbil7CiAgdmFsID0gKDEtKHheKG4rMSkpKSAvICgxLXgpCiAgCiAgcmV0dXJuICh2YWwpCn0KYGBgCgpgYGB7cn0KI0NvbXB1dGUgdXNpbmcgZm9yIGxvb3AKCmgoMC4zLCA1NSkKaCg2LjYsIDgpCmBgYAoKYGBge3J9CiNDb21wdXRlIHVzaW5nIGdlb21ldHJpYyBzdW0KCmdlb20oMC4zLCA1NSkKZ2VvbSg2LjYsIDgpCmBgYAoKVGFzayA0CgpgYGB7cn0KaF93aGlsZSA9IGZ1bmN0aW9uKHgsIG4pewogIHZhbCA9IDAuMAogIGkgPSAwCiAgCiAgd2hpbGUoaSA8PSBuKXsKICAgIHZhbCA9IHZhbCArICh4XmkpCiAgICBpID0gaSArIDEKICB9CiAgCiAgcmV0dXJuICh2YWwpCn0KYGBgCgpgYGB7cn0KaF93aGlsZSgwLjMsIDU1KQpoX3doaWxlKDYuNiwgOCkKYGBgCgpgYGB7cn0KdmVjID0gZnVuY3Rpb24oeCwgbil7CiAgcG93ID0gMDpuCiAgdmFsID0gc3VtKHhecG93KQogIAogIHJldHVybiAodmFsKQp9CmBgYAoKYGBge3J9CnZlYygwLjMsIDU1KQp2ZWMoNi42LCA4KQpgYGAKClRhc2sgNQoKYGBge3J9CnByaWNlID0gYyg1MCwgNDAsIDUyLCA0NywgNjUpCmFnZSA9IGMoMSwgNSwgNSwgMTAsIDIwKQphcmVhID0gYygxLCAxLCAyLCAyLCAzKQoKZGYgPSBkYXRhLmZyYW1lKHByaWNlLCBhZ2UsIGFyZWEpCm5hbWVzKGRmKSA9IGMoJ1ByaWNlICh4JDEwayknLCAnQWdlICh5ZWFycyknLCAnQXJlYSAoeDEwMG0yKScpCmBgYAoKYGBge3J9CmhlYWQoZGYpCmBgYAo=</div>
 
 
 
