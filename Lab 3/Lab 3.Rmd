@@ -46,7 +46,7 @@ Task 2
 
 ```{r}
 h = function(x, n){
-  val = 0
+  val = 0.0
   
   for (i in 0:n){
     val = val + (x^i)
@@ -64,4 +64,18 @@ geom = function(x, n){
   
   return (val)
 }
+```
+
+```{r}
+#Compute using for loop
+
+h(0.3, 55)
+h(6.6, 8)
+```
+
+```{r}
+#Compute using geometric sum
+
+geom(0.3, 55)
+geom(6.6, 8)
 ```

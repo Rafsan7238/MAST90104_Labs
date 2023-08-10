@@ -1812,9 +1812,9 @@ plot(x.values, y.values, type = &quot;l&quot;)</code></pre>
 <p>Task 2</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaCA9IGZ1bmN0aW9uKHgsIG4pe1xuICB2YWwgPSAwXG4gIFxuICBmb3IgKGkgaW4gMDpuKXtcbiAgICB2YWwgPSB2YWwgKyAoeF5pKVxuICB9XG4gIFxuICByZXR1cm4gKHZhbClcbn1cbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaCA9IGZ1bmN0aW9uKHgsIG4pe1xuICB2YWwgPSAwLjBcbiAgXG4gIGZvciAoaSBpbiAwOm4pe1xuICAgIHZhbCA9IHZhbCArICh4XmkpXG4gIH1cbiAgXG4gIHJldHVybiAodmFsKVxufVxuYGBgIn0= -->
 <pre class="r"><code>h = function(x, n){
-  val = 0
+  val = 0.0
   
   for (i in 0:n){
     val = val + (x^i)
@@ -1836,8 +1836,44 @@ plot(x.values, y.values, type = &quot;l&quot;)</code></pre>
 }</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0NvbXB1dGUgdXNpbmcgZm9yIGxvb3BcblxuaCgwLjMsIDU1KVxuYGBgIn0= -->
+<pre class="r"><code>#Compute using for loop
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDMiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMQoKYGBge3J9CmlmICh4IDw9IDApewogIHkgPSAtKHheMykKfSBlbHNlIGlmICh4ID4gMSl7CiAgeSA9IHNxcnQoeCkKfSBlbHNlIHsKICB5ID0geF4yCn0KCmBgYAoKYGBge3J9CiMgaW5wdXQKeC52YWx1ZXMgPC0gc2VxKC0yLCAyLCBieSA9IDAuMSkKCiMgZm9yIGVhY2ggeCBjYWxjdWxhdGUgeQpuIDwtIGxlbmd0aCh4LnZhbHVlcykKeS52YWx1ZXMgPC0gcmVwKDAsIG4pCgpmb3IgKGkgaW4gMTpuKSB7CiAgeCA8LSB4LnZhbHVlc1tpXQoKICBpZiAoeCA8PSAwKXsKICAgIHkgPSAtKHheMykKICB9IGVsc2UgaWYgKHggPiAxKXsKICAgIHkgPSBzcXJ0KHgpCiAgfSBlbHNlIHsKICAgIHkgPSB4XjIKICB9CgogIHkudmFsdWVzW2ldIDwtIHkKfQoKIyBvdXRwdXQKcGxvdCh4LnZhbHVlcywgeS52YWx1ZXMsIHR5cGUgPSAibCIpCmBgYAoKVGFzayAyCgpgYGB7cn0KaCA9IGZ1bmN0aW9uKHgsIG4pewogIHZhbCA9IDAKICAKICBmb3IgKGkgaW4gMDpuKXsKICAgIHZhbCA9IHZhbCArICh4XmkpCiAgfQogIAogIHJldHVybiAodmFsKQp9CmBgYAoKVGFzayAzCgpgYGB7cn0KZ2VvbSA9IGZ1bmN0aW9uKHgsIG4pewogIHZhbCA9ICgxLSh4XihuKzEpKSkgLyAoMS14KQogIAogIHJldHVybiAodmFsKQp9CmBgYAo=</div>
+h(0.3, 55)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEuNDI4NTcxXG4ifQ== -->
+<pre><code>[1] 1.428571</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaCg2LjYsIDgpXG5gYGAifQ== -->
+<pre class="r"><code>h(6.6, 8)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDQyNDMzMzZcbiJ9 -->
+<pre><code>[1] 4243336</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0NvbXB1dGUgdXNpbmcgZ2VvbWV0cmljIHN1bVxuXG5nZW9tKDAuMywgNTUpXG5gYGAifQ== -->
+<pre class="r"><code>#Compute using geometric sum
+
+geom(0.3, 55)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEuNDI4NTcxXG4ifQ== -->
+<pre><code>[1] 1.428571</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2VvbSg2LjYsIDgpXG5gYGAifQ== -->
+<pre class="r"><code>geom(6.6, 8)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDQyNDMzMzZcbiJ9 -->
+<pre><code>[1] 4243336</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDMiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMQoKYGBge3J9CmlmICh4IDw9IDApewogIHkgPSAtKHheMykKfSBlbHNlIGlmICh4ID4gMSl7CiAgeSA9IHNxcnQoeCkKfSBlbHNlIHsKICB5ID0geF4yCn0KCmBgYAoKYGBge3J9CiMgaW5wdXQKeC52YWx1ZXMgPC0gc2VxKC0yLCAyLCBieSA9IDAuMSkKCiMgZm9yIGVhY2ggeCBjYWxjdWxhdGUgeQpuIDwtIGxlbmd0aCh4LnZhbHVlcykKeS52YWx1ZXMgPC0gcmVwKDAsIG4pCgpmb3IgKGkgaW4gMTpuKSB7CiAgeCA8LSB4LnZhbHVlc1tpXQoKICBpZiAoeCA8PSAwKXsKICAgIHkgPSAtKHheMykKICB9IGVsc2UgaWYgKHggPiAxKXsKICAgIHkgPSBzcXJ0KHgpCiAgfSBlbHNlIHsKICAgIHkgPSB4XjIKICB9CgogIHkudmFsdWVzW2ldIDwtIHkKfQoKIyBvdXRwdXQKcGxvdCh4LnZhbHVlcywgeS52YWx1ZXMsIHR5cGUgPSAibCIpCmBgYAoKVGFzayAyCgpgYGB7cn0KaCA9IGZ1bmN0aW9uKHgsIG4pewogIHZhbCA9IDAuMAogIAogIGZvciAoaSBpbiAwOm4pewogICAgdmFsID0gdmFsICsgKHheaSkKICB9CiAgCiAgcmV0dXJuICh2YWwpCn0KYGBgCgpUYXNrIDMKCmBgYHtyfQpnZW9tID0gZnVuY3Rpb24oeCwgbil7CiAgdmFsID0gKDEtKHheKG4rMSkpKSAvICgxLXgpCiAgCiAgcmV0dXJuICh2YWwpCn0KYGBgCgpgYGB7cn0KI0NvbXB1dGUgdXNpbmcgZm9yIGxvb3AKCmgoMC4zLCA1NSkKaCg2LjYsIDgpCmBgYAoKYGBge3J9CiNDb21wdXRlIHVzaW5nIGdlb21ldHJpYyBzdW0KCmdlb20oMC4zLCA1NSkKZ2VvbSg2LjYsIDgpCmBgYAo=</div>
 
 
 
