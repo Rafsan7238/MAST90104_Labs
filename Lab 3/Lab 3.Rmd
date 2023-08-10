@@ -79,3 +79,24 @@ h(6.6, 8)
 geom(0.3, 55)
 geom(6.6, 8)
 ```
+
+Task 4
+
+```{r}
+h_while = function(x, n){
+  val = 0.0
+  i = 0
+  
+  while(i <= n){
+    val = val + (x^i)
+    i = i + 1
+  }
+  
+  return (val)
+}
+```
+
+```{r}
+h_while(0.3, 55)
+h_while(6.6, 8)
+```
