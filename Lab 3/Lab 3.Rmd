@@ -41,3 +41,17 @@ for (i in 1:n) {
 # output
 plot(x.values, y.values, type = "l")
 ```
+
+Task 2
+
+```{r}
+h = function(x, n){
+  val = 0
+  
+  for (i in 0:n){
+    val = val + (x^i)
+  }
+  
+  return (val)
+}
+```
