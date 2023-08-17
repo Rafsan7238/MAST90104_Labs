@@ -109,3 +109,27 @@ multiple_rounds <- function(N, n){
 ```{r}
 multiple_rounds(100000, 4)
 ```
+
+Task 3d
+
+```{r}
+multiple_rounds_save <- function(N, n){
+  
+  game_res = c()
+  
+  for (i in 1:N){
+    game_res[i] = sixes(n)
+    cat(game_res[i], file="sixes_sim.txt", append=TRUE, sep = '\n')
+  }
+  
+}
+```
+
+```{r}
+multiple_rounds_save(100, 4)
+```
+
+```{r}
+x = readLines('sixes_sim.txt')
+print(sum(as.logical(x)) / 100)
+```
