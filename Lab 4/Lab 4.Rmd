@@ -56,3 +56,15 @@ random.sum <- function(n) {
 ```{r}
 show(random.sum(5))
 ```
+
+Task 3a
+
+```{r}
+res <- ceiling(6*runif(4))
+
+if (length(which(res == 6)) > 0){
+  print('You Win!!')
+} else{
+  print("Sorry, you've lost!")
+}
+```
