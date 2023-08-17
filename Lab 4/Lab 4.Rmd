@@ -16,3 +16,43 @@ calc_h <- function(x, n){
   return (val)
 }
 ```
+
+Task 2
+
+```{r}
+# clear the workspace
+rm(list=ls())
+
+random.sum <- function(n) {
+  
+  # sum of n random numbers
+  x[1:n] <- ceiling(10*runif(n))
+  cat("x:", x[1:n], "\n")
+  
+  return(sum(x))
+}
+```
+
+The problem is we are taking a vector of fixed length 10 with all 100's. When we do random.sum(5), the first 5 positions of x are being replaced by random numbers while the last 5 positions have 100 in them. So the total is the sum of 5 random numbers + 5(100).
+
+The Fix:
+
+```{r}
+# clear the workspace
+rm(list=ls())
+
+random.sum <- function(n) {
+  
+  x <- rep(100, n)
+  
+  # sum of n random numbers
+  x[1:n] <- ceiling(10*runif(n))
+  cat("x:", x[1:n], "\n")
+  
+  return(sum(x))
+}
+```
+
+```{r}
+show(random.sum(5))
+```

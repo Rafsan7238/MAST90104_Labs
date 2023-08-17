@@ -1767,8 +1767,61 @@ display: none;
 }</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Task 2</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBjbGVhciB0aGUgd29ya3NwYWNlXG5ybShsaXN0PWxzKCkpXG5cbnJhbmRvbS5zdW0gPC0gZnVuY3Rpb24obikge1xuICBcbiAgIyBzdW0gb2YgbiByYW5kb20gbnVtYmVyc1xuICB4WzE6bl0gPC0gY2VpbGluZygxMCpydW5pZihuKSlcbiAgY2F0KFwieDpcIiwgeFsxOm5dLCBcIlxcblwiKVxuICBcbiAgcmV0dXJuKHN1bSh4KSlcbn1cbmBgYCJ9 -->
+<pre class="r"><code># clear the workspace
+rm(list=ls())
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDQiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMQoKYGBge3J9CmNhbGNfaCA8LSBmdW5jdGlvbih4LCBuKXsKICB2YWwgPSAwCiAgCiAgZm9yIChpIGluIDA6bil7CiAgICB2YWwgPSB2YWwgKyAoeCBeIGkpCiAgfQogIAogIHJldHVybiAodmFsKQp9CmBgYAo=</div>
+random.sum &lt;- function(n) {
+  
+  # sum of n random numbers
+  x[1:n] &lt;- ceiling(10*runif(n))
+  cat(&quot;x:&quot;, x[1:n], &quot;\n&quot;)
+  
+  return(sum(x))
+}</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>The problem is we are taking a vector of fixed length 10 with all
+100’s. When we do random.sum(5), the first 5 positions of x are being
+replaced by random numbers while the last 5 positions have 100 in them.
+So the total is the sum of 5 random numbers + 5(100).</p>
+<p>The Fix:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBjbGVhciB0aGUgd29ya3NwYWNlXG5ybShsaXN0PWxzKCkpXG5cbnJhbmRvbS5zdW0gPC0gZnVuY3Rpb24obikge1xuICBcbiAgeCA8LSByZXAoMTAwLCBuKVxuICBcbiAgIyBzdW0gb2YgbiByYW5kb20gbnVtYmVyc1xuICB4WzE6bl0gPC0gY2VpbGluZygxMCpydW5pZihuKSlcbiAgY2F0KFwieDpcIiwgeFsxOm5dLCBcIlxcblwiKVxuICBcbiAgcmV0dXJuKHN1bSh4KSlcbn1cbmBgYCJ9 -->
+<pre class="r"><code># clear the workspace
+rm(list=ls())
+
+random.sum &lt;- function(n) {
+  
+  x &lt;- rep(100, n)
+  
+  # sum of n random numbers
+  x[1:n] &lt;- ceiling(10*runif(n))
+  cat(&quot;x:&quot;, x[1:n], &quot;\n&quot;)
+  
+  return(sum(x))
+}</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2hvdyhyYW5kb20uc3VtKDUpKVxuYGBgIn0= -->
+<pre class="r"><code>show(random.sum(5))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoieDogNCA2IDkgOCA5IFxuWzFdIDM2XG4ifQ== -->
+<pre><code>x: 4 6 9 8 9 
+[1] 36</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDQiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMQoKYGBge3J9CmNhbGNfaCA8LSBmdW5jdGlvbih4LCBuKXsKICB2YWwgPSAwCiAgCiAgZm9yIChpIGluIDA6bil7CiAgICB2YWwgPSB2YWwgKyAoeCBeIGkpCiAgfQogIAogIHJldHVybiAodmFsKQp9CmBgYAoKVGFzayAyCgpgYGB7cn0KIyBjbGVhciB0aGUgd29ya3NwYWNlCnJtKGxpc3Q9bHMoKSkKCnJhbmRvbS5zdW0gPC0gZnVuY3Rpb24obikgewogIAogICMgc3VtIG9mIG4gcmFuZG9tIG51bWJlcnMKICB4WzE6bl0gPC0gY2VpbGluZygxMCpydW5pZihuKSkKICBjYXQoIng6IiwgeFsxOm5dLCAiXG4iKQogIAogIHJldHVybihzdW0oeCkpCn0KYGBgCgpUaGUgcHJvYmxlbSBpcyB3ZSBhcmUgdGFraW5nIGEgdmVjdG9yIG9mIGZpeGVkIGxlbmd0aCAxMCB3aXRoIGFsbCAxMDAncy4gV2hlbiB3ZSBkbyByYW5kb20uc3VtKDUpLCB0aGUgZmlyc3QgNSBwb3NpdGlvbnMgb2YgeCBhcmUgYmVpbmcgcmVwbGFjZWQgYnkgcmFuZG9tIG51bWJlcnMgd2hpbGUgdGhlIGxhc3QgNSBwb3NpdGlvbnMgaGF2ZSAxMDAgaW4gdGhlbS4gU28gdGhlIHRvdGFsIGlzIHRoZSBzdW0gb2YgNSByYW5kb20gbnVtYmVycyArIDUoMTAwKS4KClRoZSBGaXg6CgpgYGB7cn0KIyBjbGVhciB0aGUgd29ya3NwYWNlCnJtKGxpc3Q9bHMoKSkKCnJhbmRvbS5zdW0gPC0gZnVuY3Rpb24obikgewogIAogIHggPC0gcmVwKDEwMCwgbikKICAKICAjIHN1bSBvZiBuIHJhbmRvbSBudW1iZXJzCiAgeFsxOm5dIDwtIGNlaWxpbmcoMTAqcnVuaWYobikpCiAgY2F0KCJ4OiIsIHhbMTpuXSwgIlxuIikKICAKICByZXR1cm4oc3VtKHgpKQp9CmBgYAoKYGBge3J9CnNob3cocmFuZG9tLnN1bSg1KSkKYGBgCg==</div>
 
 
 
