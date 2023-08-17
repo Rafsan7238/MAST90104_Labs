@@ -68,3 +68,19 @@ if (length(which(res == 6)) > 0){
   print("Sorry, you've lost!")
 }
 ```
+
+Task 3b
+
+```{r}
+sixes <- function(n = 4){
+  
+  roll = ceiling(6*runif(n))
+  
+  if (length(which(roll == 6)) > 0){
+  return (TRUE)
+  } 
+  
+  return (FALSE)
+  
+}
+```
