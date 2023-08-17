@@ -2,3 +2,17 @@
 title: "Lab 4"
 output: html_notebook
 ---
+
+Task 1
+
+```{r}
+calc_h <- function(x, n){
+  val = 0
+  
+  for (i in 0:n){
+    val = val + (x ^ i)
+  }
+  
+  return (val)
+}
+```
