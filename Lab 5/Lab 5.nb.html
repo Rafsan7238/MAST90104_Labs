@@ -1798,8 +1798,32 @@ fb(8)</code></pre>
 }</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Task 3a</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBTZXQgdGhlIG1lYW4gYW5kIGNvdmFyaWFuY2UgbWF0cml4IGZvciB0aGUgYml2YXJpYXRlIG5vcm1hbCBkaXN0cmlidXRpb25cbm1lYW5fdmVjIDwtIGMoMCwgMClcbmNvdl9tYXRyaXggPC0gbWF0cml4KGMoMSwgMC43LCAwLjcsIDEpLCBucm93ID0gMilcbmBgYCJ9 -->
+<pre class="r"><code># Set the mean and covariance matrix for the bivariate normal distribution
+mean_vec &lt;- c(0, 0)
+cov_matrix &lt;- matrix(c(1, 0.7, 0.7, 1), nrow = 2)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBHZW5lcmF0ZSB0aGUgZmlyc3QgZGF0YSBzZXQgd2l0aCAyMCBwYWlycyBvZiAoeCwgeSlcbmRhdGFfc2V0XzEgPC0gcm12bm9ybSgyMCwgbWVhbiA9IG1lYW5fdmVjLCBzaWdtYSA9IGNvdl9tYXRyaXgpXG5cbiMgQWRkIHRoZSBhZGRpdGlvbmFsIHBvaW50ICgxMCwgMTApIHRvIGNyZWF0ZSB0aGUgc2Vjb25kIGRhdGEgc2V0XG5kYXRhX3NldF8yIDwtIHJiaW5kKGRhdGFfc2V0XzEsIGMoMTAsIDEwKSlcblxuIyBBZGQgdGhlIGFkZGl0aW9uYWwgcG9pbnQgKDEwLCAtMC4zKSB0byBjcmVhdGUgdGhlIHRoaXJkIGRhdGEgc2V0XG5kYXRhX3NldF8zIDwtIHJiaW5kKGRhdGFfc2V0XzEsIGMoMTAsIC0wLjMpKVxuYGBgIn0= -->
+<pre class="r"><code># Generate the first data set with 20 pairs of (x, y)
+data_set_1 &lt;- rmvnorm(20, mean = mean_vec, sigma = cov_matrix)
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDUiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMQoKYGBge3J9CmZiIDwtIGZ1bmN0aW9uKG4pIHsKICBpZiAobiA9PSAxIHx8IG4gPT0gMikgewogICAgcmV0dXJuKDEpCiAgfSBlbHNlIHsKICAgICAgcmV0dXJuKGZiKG4gLSAxKSArIGZiKG4gLSAyKSkKICAgIH0KfQoKZmIoOCkKYGBgCgpUYXNrIDIKCmBgYHtyfQpkZXQgPC0gZnVuY3Rpb24oQSwgaSl7CiAgCiAgaWYgKChkaW0oQSlbMV0gPT0gMSkgJiYgKGRpbShBKVsyXSA9PSAxKSl7CiAgICByZXR1cm4gKEFbMSwgMV0pCiAgfQogIAogIGlmICgoZGltKEEpWzFdKSA9PSAyICYmIChkaW0oQSlbMl0gPT0gMikpewogICAgcmV0dXJuIChBWzEsIDFdICogQVsyLDJdIC0gQVsxLCAyXSAqIEFbMiwxXSkKICB9CiAgCiAgZWxzZXsKICAgIHMgPSAwCiAgICAKICAgIGZvciAoaiBpbiAxOmRpbShBKVsyXSl7CiAgICAgIHMgPSBzICsgKCgtMSkgXiAoaSArIGopKSAqIEFbaSwgal0gKiBkZXQoQVstaSwgLWpdLCBpKQogICAgfQogIH0KICAKICByZXR1cm4gKHMpCiAgCn0KYGBgCg==</div>
+# Add the additional point (10, 10) to create the second data set
+data_set_2 &lt;- rbind(data_set_1, c(10, 10))
+
+# Add the additional point (10, -0.3) to create the third data set
+data_set_3 &lt;- rbind(data_set_1, c(10, -0.3))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDUiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMQoKYGBge3J9CmZiIDwtIGZ1bmN0aW9uKG4pIHsKICBpZiAobiA9PSAxIHx8IG4gPT0gMikgewogICAgcmV0dXJuKDEpCiAgfSBlbHNlIHsKICAgICAgcmV0dXJuKGZiKG4gLSAxKSArIGZiKG4gLSAyKSkKICAgIH0KfQoKZmIoOCkKYGBgCgpUYXNrIDIKCmBgYHtyfQpkZXQgPC0gZnVuY3Rpb24oQSwgaSl7CiAgCiAgaWYgKChkaW0oQSlbMV0gPT0gMSkgJiYgKGRpbShBKVsyXSA9PSAxKSl7CiAgICByZXR1cm4gKEFbMSwgMV0pCiAgfQogIAogIGlmICgoZGltKEEpWzFdKSA9PSAyICYmIChkaW0oQSlbMl0gPT0gMikpewogICAgcmV0dXJuIChBWzEsIDFdICogQVsyLDJdIC0gQVsxLCAyXSAqIEFbMiwxXSkKICB9CiAgCiAgZWxzZXsKICAgIHMgPSAwCiAgICAKICAgIGZvciAoaiBpbiAxOmRpbShBKVsyXSl7CiAgICAgIHMgPSBzICsgKCgtMSkgXiAoaSArIGopKSAqIEFbaSwgal0gKiBkZXQoQVstaSwgLWpdLCBpKQogICAgfQogIH0KICAKICByZXR1cm4gKHMpCiAgCn0KYGBgCgpUYXNrIDNhCgpgYGB7cn0KIyBTZXQgdGhlIG1lYW4gYW5kIGNvdmFyaWFuY2UgbWF0cml4IGZvciB0aGUgYml2YXJpYXRlIG5vcm1hbCBkaXN0cmlidXRpb24KbWVhbl92ZWMgPC0gYygwLCAwKQpjb3ZfbWF0cml4IDwtIG1hdHJpeChjKDEsIDAuNywgMC43LCAxKSwgbnJvdyA9IDIpCmBgYAoKYGBge3J9CiMgR2VuZXJhdGUgdGhlIGZpcnN0IGRhdGEgc2V0IHdpdGggMjAgcGFpcnMgb2YgKHgsIHkpCmRhdGFfc2V0XzEgPC0gcm12bm9ybSgyMCwgbWVhbiA9IG1lYW5fdmVjLCBzaWdtYSA9IGNvdl9tYXRyaXgpCgojIEFkZCB0aGUgYWRkaXRpb25hbCBwb2ludCAoMTAsIDEwKSB0byBjcmVhdGUgdGhlIHNlY29uZCBkYXRhIHNldApkYXRhX3NldF8yIDwtIHJiaW5kKGRhdGFfc2V0XzEsIGMoMTAsIDEwKSkKCiMgQWRkIHRoZSBhZGRpdGlvbmFsIHBvaW50ICgxMCwgLTAuMykgdG8gY3JlYXRlIHRoZSB0aGlyZCBkYXRhIHNldApkYXRhX3NldF8zIDwtIHJiaW5kKGRhdGFfc2V0XzEsIGMoMTAsIC0wLjMpKQpgYGAK</div>
 
 
 

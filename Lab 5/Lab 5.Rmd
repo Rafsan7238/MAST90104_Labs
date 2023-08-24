@@ -42,3 +42,22 @@ det <- function(A, i){
   
 }
 ```
+
+Task 3a
+
+```{r}
+# Set the mean and covariance matrix for the bivariate normal distribution
+mean_vec <- c(0, 0)
+cov_matrix <- matrix(c(1, 0.7, 0.7, 1), nrow = 2)
+```
+
+```{r}
+# Generate the first data set with 20 pairs of (x, y)
+data_set_1 <- rmvnorm(20, mean = mean_vec, sigma = cov_matrix)
+
+# Add the additional point (10, 10) to create the second data set
+data_set_2 <- rbind(data_set_1, c(10, 10))
+
+# Add the additional point (10, -0.3) to create the third data set
+data_set_3 <- rbind(data_set_1, c(10, -0.3))
+```
