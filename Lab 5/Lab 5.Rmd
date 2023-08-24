@@ -1,0 +1,18 @@
+---
+title: "Lab 5"
+output: html_notebook
+---
+
+Task 1
+
+```{r}
+fb <- function(n) {
+  if (n == 1 || n == 2) {
+    return(1)
+  } else {
+      return(fb(n - 1) + fb(n - 2))
+    }
+}
+
+fb(8)
+```
