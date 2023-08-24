@@ -73,3 +73,12 @@ y2 <- data_set_2[, 2]
 x3 <- data_set_3[, 1]
 y3 <- data_set_3[, 2]
 ```
+
+Task 3b
+
+```{r}
+# Fit simple linear regression models to each data set
+model1 <- lm(y1 ~ x1, data = data.frame(x1, y1), x=TRUE)
+model2 <- lm(y2 ~ x2, data = data.frame(x2, y2), x=TRUE)
+model3 <- lm(y3 ~ x3, data = data.frame(x3, y3), x=TRUE)
+```
