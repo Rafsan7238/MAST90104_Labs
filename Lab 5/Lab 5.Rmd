@@ -116,3 +116,17 @@ histhat(model2)
 ```{r}
 histhat(model3)
 ```
+
+Task 3e
+
+```{r}
+# Set up the plot area
+plot(x1, y1, type = "n", xlim = c(-2.1, 11), ylim = c(-2.1, 11), xlab = "x1", ylab = "y1")
+points(x1, y1, pch = 19)
+points(10, 10, pch = 17, col = "blue")
+points(10, -0.3, pch = 16, col = "red")
+abline(coef = model1$coefficients, col = "black", lwd = 2)
+abline(coef = model2$coefficients, col = "blue", lty = 2)
+abline(coef = model3$coefficients, col = "red", lty = 3)
+legend(-2, 11, legend = c("Model1", "Model2", "Model3"), col = c("black", "blue", "red"), lty = c(1, 2, 3), lwd = c(2, 1, 1))
+```
