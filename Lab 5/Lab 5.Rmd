@@ -88,7 +88,7 @@ Task 3c
 ```{r}
 histhat <- function(model) {
   # Calculate leverage values
-  leverage <- rowSums(model$x %*% solve(t(model$x) %*% model$x) %*% t(model$x))
+  leverage <- model$x %*% solve(t(model$x) %*% model$x) %*% t(model$x)
   
   # Print heading with model formula
   formula_str <- deparse(model$call$formula)
@@ -100,4 +100,19 @@ histhat <- function(model) {
   # Generate and display histogram
   hist(leverage, main = "Leverage Values Histogram", xlab = "Leverage", ylab = "Frequency")
 }
+```
+
+Task 3d
+
+```{r}
+# Call the function for each model
+histhat(model1)
+```
+
+```{r}
+histhat(model2)
+```
+
+```{r}
+histhat(model3)
 ```
