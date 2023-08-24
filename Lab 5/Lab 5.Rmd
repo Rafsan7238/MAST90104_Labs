@@ -16,3 +16,25 @@ fb <- function(n) {
 
 fb(8)
 ```
+
+Task 2
+
+```{r}
+det <- function(A, i){
+  
+  if (dim(A)[1] == 1 && dim(A)[2] == 1){
+    return (A[1, 1])
+  }
+  
+  else{
+    s = 0
+    
+    for (j in 1:dim(x)[2]){
+      s = s + ((-1) ^ (i + j)) * A[i, j] * det(A[-i, -j], i)
+    }
+  }
+  
+  return (s)
+  
+}
+```

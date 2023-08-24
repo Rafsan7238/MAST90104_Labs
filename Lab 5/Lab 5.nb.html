@@ -1770,8 +1770,32 @@ fb(8)</code></pre>
 <pre><code>[1] 21</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Task 2</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGV0IDwtIGZ1bmN0aW9uKEEsIGkpe1xuICBcbiAgaWYgKGRpbShBKVsxXSA9PSAxICYmIGRpbShBKVsyXSA9PSAxKXtcbiAgICByZXR1cm4gKEFbMSwgMV0pXG4gIH1cbiAgXG4gIGVsc2V7XG4gICAgcyA9IDBcbiAgICBcbiAgICBmb3IgKGogaW4gMTpkaW0oeClbMl0pe1xuICAgICAgcyA9IHMgKyAoKC0xKSBeIChpICsgaikpICogQVtpLCBqXSAqIGRldChBWy1pLCAtal0sIGkpXG4gICAgfVxuICB9XG4gIFxuICByZXR1cm4gKHMpXG4gIFxufVxuYGBgIn0= -->
+<pre class="r"><code>det &lt;- function(A, i){
+  
+  if (dim(A)[1] == 1 &amp;&amp; dim(A)[2] == 1){
+    return (A[1, 1])
+  }
+  
+  else{
+    s = 0
+    
+    for (j in 1:dim(x)[2]){
+      s = s + ((-1) ^ (i + j)) * A[i, j] * det(A[-i, -j], i)
+    }
+  }
+  
+  return (s)
+  
+}</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDUiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMQoKYGBge3J9CmZiIDwtIGZ1bmN0aW9uKG4pIHsKICBpZiAobiA9PSAxIHx8IG4gPT0gMikgewogICAgcmV0dXJuKDEpCiAgfSBlbHNlIHsKICAgICAgcmV0dXJuKGZiKG4gLSAxKSArIGZiKG4gLSAyKSkKICAgIH0KfQoKZmIoOCkKYGBgCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDUiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMQoKYGBge3J9CmZiIDwtIGZ1bmN0aW9uKG4pIHsKICBpZiAobiA9PSAxIHx8IG4gPT0gMikgewogICAgcmV0dXJuKDEpCiAgfSBlbHNlIHsKICAgICAgcmV0dXJuKGZiKG4gLSAxKSArIGZiKG4gLSAyKSkKICAgIH0KfQoKZmIoOCkKYGBgCgpUYXNrIDIKCmBgYHtyfQpkZXQgPC0gZnVuY3Rpb24oQSwgaSl7CiAgCiAgaWYgKGRpbShBKVsxXSA9PSAxICYmIGRpbShBKVsyXSA9PSAxKXsKICAgIHJldHVybiAoQVsxLCAxXSkKICB9CiAgCiAgZWxzZXsKICAgIHMgPSAwCiAgICAKICAgIGZvciAoaiBpbiAxOmRpbSh4KVsyXSl7CiAgICAgIHMgPSBzICsgKCgtMSkgXiAoaSArIGopKSAqIEFbaSwgal0gKiBkZXQoQVstaSwgLWpdLCBpKQogICAgfQogIH0KICAKICByZXR1cm4gKHMpCiAgCn0KYGBgCg==</div>
 
 
 
