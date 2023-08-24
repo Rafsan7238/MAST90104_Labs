@@ -61,3 +61,15 @@ data_set_2 <- rbind(data_set_1, c(10, 10))
 # Add the additional point (10, -0.3) to create the third data set
 data_set_3 <- rbind(data_set_1, c(10, -0.3))
 ```
+
+```{r}
+# Separate the data sets into variables
+x1 <- data_set_1[, 1]
+y1 <- data_set_1[, 2]
+
+x2 <- data_set_2[, 1]
+y2 <- data_set_2[, 2]
+
+x3 <- data_set_3[, 1]
+y3 <- data_set_3[, 2]
+```
