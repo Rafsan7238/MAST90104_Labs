@@ -82,3 +82,22 @@ model1 <- lm(y1 ~ x1, data = data.frame(x1, y1), x=TRUE)
 model2 <- lm(y2 ~ x2, data = data.frame(x2, y2), x=TRUE)
 model3 <- lm(y3 ~ x3, data = data.frame(x3, y3), x=TRUE)
 ```
+
+Task 3c
+
+```{r}
+histhat <- function(model) {
+  # Calculate leverage values
+  leverage <- rowSums(model$x %*% solve(t(model$x) %*% model$x) %*% t(model$x))
+  
+  # Print heading with model formula
+  formula_str <- deparse(model$call$formula)
+  writeLines(paste("Model Formula:", formula_str))
+  
+  # Print leverage values
+  writeLines(noquote(paste("Leverage Values:", leverage)))
+  
+  # Generate and display histogram
+  hist(leverage, main = "Leverage Values Histogram", xlab = "Leverage", ylab = "Frequency")
+}
+```
