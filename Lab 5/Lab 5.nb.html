@@ -1774,17 +1774,21 @@ fb(8)</code></pre>
 <p>Task 2</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGV0IDwtIGZ1bmN0aW9uKEEsIGkpe1xuICBcbiAgaWYgKGRpbShBKVsxXSA9PSAxICYmIGRpbShBKVsyXSA9PSAxKXtcbiAgICByZXR1cm4gKEFbMSwgMV0pXG4gIH1cbiAgXG4gIGVsc2V7XG4gICAgcyA9IDBcbiAgICBcbiAgICBmb3IgKGogaW4gMTpkaW0oeClbMl0pe1xuICAgICAgcyA9IHMgKyAoKC0xKSBeIChpICsgaikpICogQVtpLCBqXSAqIGRldChBWy1pLCAtal0sIGkpXG4gICAgfVxuICB9XG4gIFxuICByZXR1cm4gKHMpXG4gIFxufVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGV0IDwtIGZ1bmN0aW9uKEEsIGkpe1xuICBcbiAgaWYgKChkaW0oQSlbMV0gPT0gMSkgJiYgKGRpbShBKVsyXSA9PSAxKSl7XG4gICAgcmV0dXJuIChBWzEsIDFdKVxuICB9XG4gIFxuICBpZiAoKGRpbShBKVsxXSkgPT0gMiAmJiAoZGltKEEpWzJdID09IDIpKXtcbiAgICByZXR1cm4gKEFbMSwgMV0gKiBBWzIsMl0gLSBBWzEsIDJdICogQVsyLDFdKVxuICB9XG4gIFxuICBlbHNle1xuICAgIHMgPSAwXG4gICAgXG4gICAgZm9yIChqIGluIDE6ZGltKEEpWzJdKXtcbiAgICAgIHMgPSBzICsgKCgtMSkgXiAoaSArIGopKSAqIEFbaSwgal0gKiBkZXQoQVstaSwgLWpdLCBpKVxuICAgIH1cbiAgfVxuICBcbiAgcmV0dXJuIChzKVxuICBcbn1cbmBgYCJ9 -->
 <pre class="r"><code>det &lt;- function(A, i){
   
-  if (dim(A)[1] == 1 &amp;&amp; dim(A)[2] == 1){
+  if ((dim(A)[1] == 1) &amp;&amp; (dim(A)[2] == 1)){
     return (A[1, 1])
+  }
+  
+  if ((dim(A)[1]) == 2 &amp;&amp; (dim(A)[2] == 2)){
+    return (A[1, 1] * A[2,2] - A[1, 2] * A[2,1])
   }
   
   else{
     s = 0
     
-    for (j in 1:dim(x)[2]){
+    for (j in 1:dim(A)[2]){
       s = s + ((-1) ^ (i + j)) * A[i, j] * det(A[-i, -j], i)
     }
   }
@@ -1795,7 +1799,7 @@ fb(8)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDUiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMQoKYGBge3J9CmZiIDwtIGZ1bmN0aW9uKG4pIHsKICBpZiAobiA9PSAxIHx8IG4gPT0gMikgewogICAgcmV0dXJuKDEpCiAgfSBlbHNlIHsKICAgICAgcmV0dXJuKGZiKG4gLSAxKSArIGZiKG4gLSAyKSkKICAgIH0KfQoKZmIoOCkKYGBgCgpUYXNrIDIKCmBgYHtyfQpkZXQgPC0gZnVuY3Rpb24oQSwgaSl7CiAgCiAgaWYgKGRpbShBKVsxXSA9PSAxICYmIGRpbShBKVsyXSA9PSAxKXsKICAgIHJldHVybiAoQVsxLCAxXSkKICB9CiAgCiAgZWxzZXsKICAgIHMgPSAwCiAgICAKICAgIGZvciAoaiBpbiAxOmRpbSh4KVsyXSl7CiAgICAgIHMgPSBzICsgKCgtMSkgXiAoaSArIGopKSAqIEFbaSwgal0gKiBkZXQoQVstaSwgLWpdLCBpKQogICAgfQogIH0KICAKICByZXR1cm4gKHMpCiAgCn0KYGBgCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDUiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMQoKYGBge3J9CmZiIDwtIGZ1bmN0aW9uKG4pIHsKICBpZiAobiA9PSAxIHx8IG4gPT0gMikgewogICAgcmV0dXJuKDEpCiAgfSBlbHNlIHsKICAgICAgcmV0dXJuKGZiKG4gLSAxKSArIGZiKG4gLSAyKSkKICAgIH0KfQoKZmIoOCkKYGBgCgpUYXNrIDIKCmBgYHtyfQpkZXQgPC0gZnVuY3Rpb24oQSwgaSl7CiAgCiAgaWYgKChkaW0oQSlbMV0gPT0gMSkgJiYgKGRpbShBKVsyXSA9PSAxKSl7CiAgICByZXR1cm4gKEFbMSwgMV0pCiAgfQogIAogIGlmICgoZGltKEEpWzFdKSA9PSAyICYmIChkaW0oQSlbMl0gPT0gMikpewogICAgcmV0dXJuIChBWzEsIDFdICogQVsyLDJdIC0gQVsxLCAyXSAqIEFbMiwxXSkKICB9CiAgCiAgZWxzZXsKICAgIHMgPSAwCiAgICAKICAgIGZvciAoaiBpbiAxOmRpbShBKVsyXSl7CiAgICAgIHMgPSBzICsgKCgtMSkgXiAoaSArIGopKSAqIEFbaSwgal0gKiBkZXQoQVstaSwgLWpdLCBpKQogICAgfQogIH0KICAKICByZXR1cm4gKHMpCiAgCn0KYGBgCg==</div>
 
 
 
