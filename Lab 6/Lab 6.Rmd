@@ -64,3 +64,30 @@ subset
 tallest_identity <- subset[order(subset$height.m, decreasing = TRUE), ][1,]
 tallest_identity
 ```
+
+Task 2a
+
+```{r}
+mammals <- read.csv("sleep.csv")
+mammals
+```
+
+```{r}
+plot(mammals$BodyWt, mammals$BrainWt, 
+     xlab = "Body Weight (kg)", ylab = "Brain Weight (g)",
+     main = "Brain Weight vs. Body Weight", pch = 19)
+```
+
+```{r}
+model <- lm(BrainWt ~ BodyWt, data = mammals)
+summary(model)
+```
+
+```{r}
+# Plot the diagnostics plots
+par(mfrow = c(2, 2)) # Set up a 2x2 grid for plots
+plot(model) # Residuals vs Fitted, Normal Q-Q, Scale-Location, Residuals vs Leverage
+
+# Reset the plot layout
+par(mfrow = c(1, 1))
+```
