@@ -91,3 +91,32 @@ plot(model) # Residuals vs Fitted, Normal Q-Q, Scale-Location, Residuals vs Leve
 # Reset the plot layout
 par(mfrow = c(1, 1))
 ```
+
+Task 2b
+
+```{r}
+mammals$BodyWt <- log(mammals$BodyWt)
+mammals$BrainWt <- log(mammals$BrainWt)
+```
+
+```{r}
+model2 <- lm(BrainWt ~ BodyWt, data = mammals)
+summary(model)
+```
+
+```{r}
+plot(mammals$BodyWt, mammals$BrainWt, 
+     xlab = "Log Body Weight (kg)", ylab = "Log Brain Weight (g)",
+     main = "Brain Weight vs. Body Weight", pch = 19)
+
+abline(model2$coefficients, col = "blue", lwd = 2)
+```
+
+```{r}
+# Plot the diagnostics plots
+par(mfrow = c(2, 2)) # Set up a 2x2 grid for plots
+plot(model2) # Residuals vs Fitted, Normal Q-Q, Scale-Location, Residuals vs Leverage
+
+# Reset the plot layout
+par(mfrow = c(1, 1))
+```
