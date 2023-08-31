@@ -26,3 +26,19 @@ Task 1b
 mean_diam_species <- aggregate(data$dbh.cm, list(data$species), mean)
 mean_diam_species
 ```
+
+Task 1c
+
+```{r}
+third_quartile <- function(x) quantile(x, probs = 0.75)
+third_quartile_diameters <- aggregate(data$dbh.cm, list(data$species), third_quartile)
+
+names(third_quartile_diameters) <- c('species', 'third_quartile diam')
+third_quartile_diameters
+```
+
+```{r}
+largest_third_quartile_species <- third_quartile_diameters[order(third_quartile_diameters$`third_quartile diam`, decreasing = TRUE), "species"][1:2]
+
+largest_third_quartile_species
+```

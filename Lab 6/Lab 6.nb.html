@@ -1805,8 +1805,39 @@ mean_diam_species</code></pre>
 </div>
 <!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Task 1c</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGhpcmRfcXVhcnRpbGUgPC0gZnVuY3Rpb24oeCkgcXVhbnRpbGUoeCwgcHJvYnMgPSAwLjc1KVxudGhpcmRfcXVhcnRpbGVfZGlhbWV0ZXJzIDwtIGFnZ3JlZ2F0ZShkYXRhJGRiaC5jbSwgbGlzdChkYXRhJHNwZWNpZXMpLCB0aGlyZF9xdWFydGlsZSlcblxubmFtZXModGhpcmRfcXVhcnRpbGVfZGlhbWV0ZXJzKSA8LSBjKCdzcGVjaWVzJywgJ3RoaXJkX3F1YXJ0aWxlIGRpYW0nKVxudGhpcmRfcXVhcnRpbGVfZGlhbWV0ZXJzXG5gYGAifQ== -->
+<pre class="r"><code>third_quartile &lt;- function(x) quantile(x, probs = 0.75)
+third_quartile_diameters &lt;- aggregate(data$dbh.cm, list(data$species), third_quartile)
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDYiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMWEKCmBgYHtyfQpkYXRhIDwtIHJlYWQuY3N2KCd1ZmMuY3N2JykKZGF0YQpgYGAKCmBgYHtyfQp0aHJlZV90YWxsIDwtIGRhdGFbb3JkZXIoZGF0YSRoZWlnaHQubSwgZGVjcmVhc2luZyA9IFRSVUUpLCAnc3BlY2llcyddWzE6M10KdGhyZWVfdGFsbApgYGAKCmBgYHtyfQpmaXZlX2ZhdCA8LSBkYXRhW29yZGVyKGRhdGEkZGJoLmNtLCBkZWNyZWFzaW5nID0gVFJVRSksICdzcGVjaWVzJ11bMTo1XQpmaXZlX2ZhdApgYGAKClRhc2sgMWIKCmBgYHtyfQptZWFuX2RpYW1fc3BlY2llcyA8LSBhZ2dyZWdhdGUoZGF0YSRkYmguY20sIGxpc3QoZGF0YSRzcGVjaWVzKSwgbWVhbikKbWVhbl9kaWFtX3NwZWNpZXMKYGBgCg==</div>
+names(third_quartile_diameters) &lt;- c(&#39;species&#39;, &#39;third_quartile diam&#39;)
+third_quartile_diameters</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NCwibmNvbCI6Miwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbNCDDlyAyXSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVEwVXJETUJTOXkxckhDaHZDZlBGdFA5QytETUhIZ3JNcStEUVU5eVpaR3pXUU5qV051RWQvWTM2VG4rSTNURy9TWkl3Y2FIck95YjMzY0xOYXJoZkpPZ0dBSVVTRXdEQkdDdkhqUTVGZUFqb29CaERCMlB5M1dEUkRZc3hUL0NKM1FaYUZaemNIOW5SMVlQZDRUazE5Zm5lK1Ezem54Y0lpdjkzMSt2cjN4eUFJakJ0YXM4NkZFV2VPdXBhVkhPMWV6dlFiVjlYeit3ZFZtZ3MycnppdGd6RmpKVDh6UDJwaVJuMkJSUlRtbFlKMlBzK2JTVVUxelY0VTlxUGFCeTBqMldvdUcyd2k1bVhpb0htZ0F1T01iV25kQ3BadWFNZFNxU3FtMGd1VFltdDZUQnlQampqcGM4bWZteGU3ZVNlc2VlVU44d3NJdW1IQ2lTbXViYmZPV3NVYjdkZEJ0OHUwMU5UWEphVVUzckVMd3Y0ZitWaGpWaFVDQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["species"],"name":[1],"type":["chr"],"align":["left"]},{"label":["third_quartile diam"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"DF","2":"50.20"},{"1":"GF","2":"44.40"},{"1":"WC","2":"49.20"},{"1":"WL","2":"43.85"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[4]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGFyZ2VzdF90aGlyZF9xdWFydGlsZV9zcGVjaWVzIDwtIHRoaXJkX3F1YXJ0aWxlX2RpYW1ldGVyc1tvcmRlcih0aGlyZF9xdWFydGlsZV9kaWFtZXRlcnMkYHRoaXJkX3F1YXJ0aWxlIGRpYW1gLCBkZWNyZWFzaW5nID0gVFJVRSksIFwic3BlY2llc1wiXVsxOjJdXG5cbmxhcmdlc3RfdGhpcmRfcXVhcnRpbGVfc3BlY2llc1xuYGBgIn0= -->
+<pre class="r"><code>largest_third_quartile_species &lt;- third_quartile_diameters[order(third_quartile_diameters$`third_quartile diam`, decreasing = TRUE), &quot;species&quot;][1:2]
+
+largest_third_quartile_species</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiREZcIiBcIldDXCJcbiJ9 -->
+<pre><code>[1] &quot;DF&quot; &quot;WC&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDYiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMWEKCmBgYHtyfQpkYXRhIDwtIHJlYWQuY3N2KCd1ZmMuY3N2JykKZGF0YQpgYGAKCmBgYHtyfQp0aHJlZV90YWxsIDwtIGRhdGFbb3JkZXIoZGF0YSRoZWlnaHQubSwgZGVjcmVhc2luZyA9IFRSVUUpLCAnc3BlY2llcyddWzE6M10KdGhyZWVfdGFsbApgYGAKCmBgYHtyfQpmaXZlX2ZhdCA8LSBkYXRhW29yZGVyKGRhdGEkZGJoLmNtLCBkZWNyZWFzaW5nID0gVFJVRSksICdzcGVjaWVzJ11bMTo1XQpmaXZlX2ZhdApgYGAKClRhc2sgMWIKCmBgYHtyfQptZWFuX2RpYW1fc3BlY2llcyA8LSBhZ2dyZWdhdGUoZGF0YSRkYmguY20sIGxpc3QoZGF0YSRzcGVjaWVzKSwgbWVhbikKbWVhbl9kaWFtX3NwZWNpZXMKYGBgCgpUYXNrIDFjCgpgYGB7cn0KdGhpcmRfcXVhcnRpbGUgPC0gZnVuY3Rpb24oeCkgcXVhbnRpbGUoeCwgcHJvYnMgPSAwLjc1KQp0aGlyZF9xdWFydGlsZV9kaWFtZXRlcnMgPC0gYWdncmVnYXRlKGRhdGEkZGJoLmNtLCBsaXN0KGRhdGEkc3BlY2llcyksIHRoaXJkX3F1YXJ0aWxlKQoKbmFtZXModGhpcmRfcXVhcnRpbGVfZGlhbWV0ZXJzKSA8LSBjKCdzcGVjaWVzJywgJ3RoaXJkX3F1YXJ0aWxlIGRpYW0nKQp0aGlyZF9xdWFydGlsZV9kaWFtZXRlcnMKYGBgCgpgYGB7cn0KbGFyZ2VzdF90aGlyZF9xdWFydGlsZV9zcGVjaWVzIDwtIHRoaXJkX3F1YXJ0aWxlX2RpYW1ldGVyc1tvcmRlcih0aGlyZF9xdWFydGlsZV9kaWFtZXRlcnMkYHRoaXJkX3F1YXJ0aWxlIGRpYW1gLCBkZWNyZWFzaW5nID0gVFJVRSksICJzcGVjaWVzIl1bMToyXQoKbGFyZ2VzdF90aGlyZF9xdWFydGlsZV9zcGVjaWVzCmBgYAo=</div>
 
 
 
