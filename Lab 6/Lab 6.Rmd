@@ -130,3 +130,13 @@ predict(model2, list(BodyWt = log(50)), interval = "confidence", level = 0.95)
 ```{r}
 predict(model2, list(BodyWt = log(50)), interval = "prediction", level = 0.95)
 ```
+
+Task 2e
+
+```{r}
+null <- lm(BrainWt ~ 0, data = mammals)
+null2 <- lm(BrainWt ~ 1, data = mammals)
+null3 <- lm(BrainWt ~ 0 + BodyWt, data=mammals)
+
+anova(null, null3, null2, model2)
+```
