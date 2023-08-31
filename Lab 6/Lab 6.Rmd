@@ -120,3 +120,13 @@ plot(model2) # Residuals vs Fitted, Normal Q-Q, Scale-Location, Residuals vs Lev
 # Reset the plot layout
 par(mfrow = c(1, 1))
 ```
+
+Task 2c
+
+```{r}
+predict(model2, list(BodyWt = log(50)), interval = "confidence", level = 0.95)
+```
+
+```{r}
+predict(model2, list(BodyWt = log(50)), interval = "prediction", level = 0.95)
+```
