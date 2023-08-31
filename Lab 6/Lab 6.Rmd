@@ -19,3 +19,10 @@ three_tall
 five_fat <- data[order(data$dbh.cm, decreasing = TRUE), 'species'][1:5]
 five_fat
 ```
+
+Task 1b
+
+```{r}
+mean_diam_species <- aggregate(data$dbh.cm, list(data$species), mean)
+mean_diam_species
+```
