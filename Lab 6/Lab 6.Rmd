@@ -42,3 +42,25 @@ largest_third_quartile_species <- third_quartile_diameters[order(third_quartile_
 
 largest_third_quartile_species
 ```
+
+Task 1d
+
+```{r}
+names(mean_diam_species) <- c('species', 'mean_diameter')
+mean_diam_species
+```
+
+```{r}
+fattest <- mean_diam_species[order(mean_diam_species$mean_diameter, decreasing = TRUE), 'species'][1]
+fattest
+```
+
+```{r}
+subset <- data[data$species == fattest, ]
+subset
+```
+
+```{r}
+tallest_identity <- subset[order(subset$height.m, decreasing = TRUE), ][1,]
+tallest_identity
+```
