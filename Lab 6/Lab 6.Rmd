@@ -2,3 +2,20 @@
 title: "Lab 6"
 output: html_notebook
 ---
+
+Task 1a
+
+```{r}
+data <- read.csv('ufc.csv')
+data
+```
+
+```{r}
+three_tall <- data[order(data$height.m, decreasing = TRUE), 'species'][1:3]
+three_tall
+```
+
+```{r}
+five_fat <- data[order(data$dbh.cm, decreasing = TRUE), 'species'][1:5]
+five_fat
+```
