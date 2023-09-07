@@ -117,3 +117,9 @@ X
 model2 <- lm(Volume ~ Girth + Height + Girth2 + Girth2Height, data = trees)
 model3 <- step(model2, scope~.)
 ```
+
+Task 2c
+
+```{r}
+plot(model3)
+```
