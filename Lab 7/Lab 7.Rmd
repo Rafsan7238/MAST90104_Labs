@@ -2,3 +2,9 @@
 title: "Lab 7"
 output: html_notebook
 ---
+
+Task 1a
+
+```{r}
+data(teengamb)
+```
