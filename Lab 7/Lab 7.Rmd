@@ -49,3 +49,53 @@ Task 1c
 ```{r}
 step(nullmodel, scope = ~. + sex + status + income + verbal)
 ```
+
+Task 2a
+
+```{r}
+data(trees)
+?trees
+pairs(trees)
+```
+
+```{r}
+y <- matrix(trees$Volume, 31, 1)
+X <- matrix(cbind(rep(1, 31), trees$Girth, trees$Height), 31, 3)
+```
+
+```{r}
+y
+X
+```
+
+```{r}
+(b <- solve(t(X)%*%X, t(X)%*%y))
+```
+
+```{r}
+SSTotal <- t(y)%*%y
+SSRes <- sum((y - X%*%b)^2)
+SSReg <- SSTotal - SSRes
+```
+
+```{r}
+X2 <- X[, -3]
+X2
+```
+
+```{r}
+Rb2 <- t(y)%*%X2%*%solve(t(X2)%*%X2)%*%t(X2)%*%y
+Rb1b2 <- SSReg - Rb2
+```
+
+```{r}
+Fstat <- (Rb1b2/1)/(SSRes/(31-3))
+pf(Fstat, 1, 31-3, lower.tail = FALSE)
+```
+
+```{r}
+model <- lm(Volume ~ Girth + Height, data = trees)
+null <- lm(Volume ~ Girth, data = trees)
+
+anova(null, model)
+```
