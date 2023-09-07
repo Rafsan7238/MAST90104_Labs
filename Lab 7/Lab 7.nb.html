@@ -1829,8 +1829,69 @@ income  1   15309.8 38091 318.79  29.569 2.245e-06 ***
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Task 1b</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYWRkMShudWxsbW9kZWwsIHNjb3Blfi4gKyBzZXggKyBzdGF0dXMgKyArIGluY29tZSArIHZlcmJhbCwgdGVzdCA9IFwiRlwiKVxuYGBgIn0= -->
+<pre class="r"><code>add1(nullmodel, scope~. + sex + status + + income + verbal, test = &quot;F&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiU2luZ2xlIHRlcm0gYWRkaXRpb25zXG5cbk1vZGVsOlxuZ2FtYmxlIH4gMVxuICAgICAgIERmIFN1bSBvZiBTcSAgIFJTUyAgICBBSUMgRiB2YWx1ZSAgICBQcig+RikgICAgXG48bm9uZT4gICAgICAgICAgICAgIDQ1Njg5IDMyNS4zNCAgICAgICAgICAgICAgICAgICAgICBcbnNleCAgICAgMSAgICA3NTk4LjQgMzgwOTEgMzE4Ljc5ICA4Ljk3NjYgIDAuMDA0NDM3ICoqIFxuc3RhdHVzICAxICAgICAxMTYuMiA0NTU3MyAzMjcuMjIgIDAuMTE0NyAgMC43MzY0MzggICAgXG5pbmNvbWUgIDEgICAxNzY4MC45IDI4MDA5IDMwNC4zNCAyOC40MDcwIDMuMDQ1ZS0wNiAqKipcbnZlcmJhbCAgMSAgICAyMjEyLjUgNDM0NzcgMzI1LjAwICAyLjI5MDAgIDAuMTM3MjAyICAgIFxuLS0tXG5TaWduaWYuIGNvZGVzOiAgMCDigJgqKirigJkgMC4wMDEg4oCYKirigJkgMC4wMSDigJgq4oCZIDAuMDUg4oCYLuKAmSAwLjEg4oCYIOKAmSAxXG4ifQ== -->
+<pre><code>Single term additions
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDciCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMWEKCmBgYHtyfQpkYXRhKHRlZW5nYW1iKQpgYGAKCmBgYHtyfQpmdWxsbW9kZWwgPC0gbG0oZ2FtYmxlIH4gLiwgZGF0YSA9IHRlZW5nYW1iKQpudWxsbW9kZWwgPC0gbG0oZ2FtYmxlIH4gMSwgZGF0YSA9IHRlZW5nYW1iKQpgYGAKCmBgYHtyfQpkcm9wMShmdWxsbW9kZWwsIHNjb3Blfi4sIHRlc3QgPSAiRiIpCmBgYAoKYGBge3J9Cm1vZGVsMiA8LSBsbShnYW1ibGUgfiBzZXggKyBpbmNvbWUgKyB2ZXJiYWwsIGRhdGEgPSB0ZWVuZ2FtYikKZHJvcDEobW9kZWwyLCBzY29wZX4uLCB0ZXN0ID0gIkYiKQpgYGAKCmBgYHtyfQptb2RlbDMgPC0gbG0oZ2FtYmxlIH4gc2V4ICsgaW5jb21lLCBkYXRhID0gdGVlbmdhbWIpCmRyb3AxKG1vZGVsMywgc2NvcGV+LiwgdGVzdCA9ICJGIikKYGBgCg==</div>
+Model:
+gamble ~ 1
+       Df Sum of Sq   RSS    AIC F value    Pr(&gt;F)    
+&lt;none&gt;              45689 325.34                      
+sex     1    7598.4 38091 318.79  8.9766  0.004437 ** 
+status  1     116.2 45573 327.22  0.1147  0.736438    
+income  1   17680.9 28009 304.34 28.4070 3.045e-06 ***
+verbal  1    2212.5 43477 325.00  2.2900  0.137202    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubW9kZWwyIDwtIGxtKGdhbWJsZSB+IGluY29tZSwgZGF0YSA9IHRlZW5nYW1iKVxuYWRkMShtb2RlbDIsIHNjb3Blfi4gKyBzZXggKyBzdGF0dXMgKyB2ZXJiYWwsIHRlc3QgPSBcIkZcIilcbmBgYCJ9 -->
+<pre class="r"><code>model2 &lt;- lm(gamble ~ income, data = teengamb)
+add1(model2, scope~. + sex + status + verbal, test = &quot;F&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiU2luZ2xlIHRlcm0gYWRkaXRpb25zXG5cbk1vZGVsOlxuZ2FtYmxlIH4gaW5jb21lXG4gICAgICAgRGYgU3VtIG9mIFNxICAgUlNTICAgIEFJQyBGIHZhbHVlICAgUHIoPkYpICAgXG48bm9uZT4gICAgICAgICAgICAgIDI4MDA5IDMwNC4zNCAgICAgICAgICAgICAgICAgICAgXG5zZXggICAgIDEgICAgNTIyNy4zIDIyNzgxIDI5Ni42MyAxMC4wOTYwIDAuMDAyNzE3ICoqXG5zdGF0dXMgIDEgICAgIDcxOS44IDI3Mjg5IDMwNS4xMSAgMS4xNjA1IDAuMjg3MjI4ICAgXG52ZXJiYWwgIDEgICAgIDU3OS4xIDI3NDI5IDMwNS4zNSAgMC45MjkwIDAuMzQwMzg1ICAgXG4tLS1cblNpZ25pZi4gY29kZXM6ICAwIOKAmCoqKuKAmSAwLjAwMSDigJgqKuKAmSAwLjAxIOKAmCrigJkgMC4wNSDigJgu4oCZIDAuMSDigJgg4oCZIDFcbiJ9 -->
+<pre><code>Single term additions
+
+Model:
+gamble ~ income
+       Df Sum of Sq   RSS    AIC F value   Pr(&gt;F)   
+&lt;none&gt;              28009 304.34                    
+sex     1    5227.3 22781 296.63 10.0960 0.002717 **
+status  1     719.8 27289 305.11  1.1605 0.287228   
+verbal  1     579.1 27429 305.35  0.9290 0.340385   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubW9kZWwzIDwtIGxtKGdhbWJsZSB+IGluY29tZSArIHNleCwgZGF0YSA9IHRlZW5nYW1iKVxuYWRkMShtb2RlbDMsIHNjb3Blfi4gKyBzdGF0dXMgKyB2ZXJiYWwsIHRlc3QgPSBcIkZcIilcbmBgYCJ9 -->
+<pre class="r"><code>model3 &lt;- lm(gamble ~ income + sex, data = teengamb)
+add1(model3, scope~. + status + verbal, test = &quot;F&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiU2luZ2xlIHRlcm0gYWRkaXRpb25zXG5cbk1vZGVsOlxuZ2FtYmxlIH4gaW5jb21lICsgc2V4XG4gICAgICAgRGYgU3VtIG9mIFNxICAgUlNTICAgIEFJQyBGIHZhbHVlIFByKD5GKVxuPG5vbmU+ICAgICAgICAgICAgICAyMjc4MSAyOTYuNjMgICAgICAgICAgICAgICBcbnN0YXR1cyAgMSAgICAyMDEuODIgMjI1ODAgMjk4LjIxICAwLjM4NDMgMC41Mzg2XG52ZXJiYWwgIDEgICAxMTM5Ljc4IDIxNjQyIDI5Ni4yMSAgMi4yNjQ2IDAuMTM5N1xuIn0= -->
+<pre><code>Single term additions
+
+Model:
+gamble ~ income + sex
+       Df Sum of Sq   RSS    AIC F value Pr(&gt;F)
+&lt;none&gt;              22781 296.63               
+status  1    201.82 22580 298.21  0.3843 0.5386
+verbal  1   1139.78 21642 296.21  2.2646 0.1397</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDciCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMWEKCmBgYHtyfQpkYXRhKHRlZW5nYW1iKQpgYGAKCmBgYHtyfQpmdWxsbW9kZWwgPC0gbG0oZ2FtYmxlIH4gLiwgZGF0YSA9IHRlZW5nYW1iKQpudWxsbW9kZWwgPC0gbG0oZ2FtYmxlIH4gMSwgZGF0YSA9IHRlZW5nYW1iKQpgYGAKCmBgYHtyfQpkcm9wMShmdWxsbW9kZWwsIHNjb3Blfi4sIHRlc3QgPSAiRiIpCmBgYAoKYGBge3J9Cm1vZGVsMiA8LSBsbShnYW1ibGUgfiBzZXggKyBpbmNvbWUgKyB2ZXJiYWwsIGRhdGEgPSB0ZWVuZ2FtYikKZHJvcDEobW9kZWwyLCBzY29wZX4uLCB0ZXN0ID0gIkYiKQpgYGAKCmBgYHtyfQptb2RlbDMgPC0gbG0oZ2FtYmxlIH4gc2V4ICsgaW5jb21lLCBkYXRhID0gdGVlbmdhbWIpCmRyb3AxKG1vZGVsMywgc2NvcGV+LiwgdGVzdCA9ICJGIikKYGBgCgpUYXNrIDFiCgpgYGB7cn0KYWRkMShudWxsbW9kZWwsIHNjb3Blfi4gKyBzZXggKyBzdGF0dXMgKyArIGluY29tZSArIHZlcmJhbCwgdGVzdCA9ICJGIikKYGBgCgpgYGB7cn0KbW9kZWwyIDwtIGxtKGdhbWJsZSB+IGluY29tZSwgZGF0YSA9IHRlZW5nYW1iKQphZGQxKG1vZGVsMiwgc2NvcGV+LiArIHNleCArIHN0YXR1cyArIHZlcmJhbCwgdGVzdCA9ICJGIikKYGBgCgpgYGB7cn0KbW9kZWwzIDwtIGxtKGdhbWJsZSB+IGluY29tZSArIHNleCwgZGF0YSA9IHRlZW5nYW1iKQphZGQxKG1vZGVsMywgc2NvcGV+LiArIHN0YXR1cyArIHZlcmJhbCwgdGVzdCA9ICJGIikKYGBgCg==</div>
 
 
 
