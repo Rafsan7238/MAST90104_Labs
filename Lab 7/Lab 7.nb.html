@@ -1833,8 +1833,8 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 <p>Task 1b</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYWRkMShudWxsbW9kZWwsIHNjb3Blfi4gKyBzZXggKyBzdGF0dXMgKyArIGluY29tZSArIHZlcmJhbCwgdGVzdCA9IFwiRlwiKVxuYGBgIn0= -->
-<pre class="r"><code>add1(nullmodel, scope~. + sex + status + + income + verbal, test = &quot;F&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYWRkMShudWxsbW9kZWwsIHNjb3Blfi4gKyBzZXggKyBzdGF0dXMgKyBpbmNvbWUgKyB2ZXJiYWwsIHRlc3QgPSBcIkZcIilcbmBgYCJ9 -->
+<pre class="r"><code>add1(nullmodel, scope~. + sex + status + income + verbal, test = &quot;F&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiU2luZ2xlIHRlcm0gYWRkaXRpb25zXG5cbk1vZGVsOlxuZ2FtYmxlIH4gMVxuICAgICAgIERmIFN1bSBvZiBTcSAgIFJTUyAgICBBSUMgRiB2YWx1ZSAgICBQcig+RikgICAgXG48bm9uZT4gICAgICAgICAgICAgIDQ1Njg5IDMyNS4zNCAgICAgICAgICAgICAgICAgICAgICBcbnNleCAgICAgMSAgICA3NTk4LjQgMzgwOTEgMzE4Ljc5ICA4Ljk3NjYgIDAuMDA0NDM3ICoqIFxuc3RhdHVzICAxICAgICAxMTYuMiA0NTU3MyAzMjcuMjIgIDAuMTE0NyAgMC43MzY0MzggICAgXG5pbmNvbWUgIDEgICAxNzY4MC45IDI4MDA5IDMwNC4zNCAyOC40MDcwIDMuMDQ1ZS0wNiAqKipcbnZlcmJhbCAgMSAgICAyMjEyLjUgNDM0NzcgMzI1LjAwICAyLjI5MDAgIDAuMTM3MjAyICAgIFxuLS0tXG5TaWduaWYuIGNvZGVzOiAgMCDigJgqKirigJkgMC4wMDEg4oCYKirigJkgMC4wMSDigJgq4oCZIDAuMDUg4oCYLuKAmSAwLjEg4oCYIOKAmSAxXG4ifQ== -->
 <pre><code>Single term additions
@@ -1890,8 +1890,64 @@ status  1    201.82 22580 298.21  0.3843 0.5386
 verbal  1   1139.78 21642 296.21  2.2646 0.1397</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Task 1c</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RlcChudWxsbW9kZWwsIHNjb3BlID0gfi4gKyBzZXggKyBzdGF0dXMgKyBpbmNvbWUgKyB2ZXJiYWwpXG5gYGAifQ== -->
+<pre class="r"><code>step(nullmodel, scope = ~. + sex + status + income + verbal)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiU3RhcnQ6ICBBSUM9MzI1LjM0XG5nYW1ibGUgfiAxXG5cbiAgICAgICAgIERmIFN1bSBvZiBTcSAgIFJTUyAgICBBSUNcbisgaW5jb21lICAxICAgMTc2ODAuOSAyODAwOSAzMDQuMzRcbisgc2V4ICAgICAxICAgIDc1OTguNCAzODA5MSAzMTguNzlcbisgdmVyYmFsICAxICAgIDIyMTIuNSA0MzQ3NyAzMjUuMDBcbjxub25lPiAgICAgICAgICAgICAgICA0NTY4OSAzMjUuMzRcbisgc3RhdHVzICAxICAgICAxMTYuMiA0NTU3MyAzMjcuMjJcblxuU3RlcDogIEFJQz0zMDQuMzRcbmdhbWJsZSB+IGluY29tZVxuXG4gICAgICAgICBEZiBTdW0gb2YgU3EgICBSU1MgICAgQUlDXG4rIHNleCAgICAgMSAgICA1MjI3LjMgMjI3ODEgMjk2LjYzXG48bm9uZT4gICAgICAgICAgICAgICAgMjgwMDkgMzA0LjM0XG4rIHN0YXR1cyAgMSAgICAgNzE5LjggMjcyODkgMzA1LjExXG4rIHZlcmJhbCAgMSAgICAgNTc5LjEgMjc0MjkgMzA1LjM1XG4tIGluY29tZSAgMSAgIDE3NjgwLjkgNDU2ODkgMzI1LjM0XG5cblN0ZXA6ICBBSUM9Mjk2LjYzXG5nYW1ibGUgfiBpbmNvbWUgKyBzZXhcblxuICAgICAgICAgRGYgU3VtIG9mIFNxICAgUlNTICAgIEFJQ1xuKyB2ZXJiYWwgIDEgICAgMTEzOS44IDIxNjQyIDI5Ni4yMVxuPG5vbmU+ICAgICAgICAgICAgICAgIDIyNzgxIDI5Ni42M1xuKyBzdGF0dXMgIDEgICAgIDIwMS44IDIyNTgwIDI5OC4yMVxuLSBzZXggICAgIDEgICAgNTIyNy4zIDI4MDA5IDMwNC4zNFxuLSBpbmNvbWUgIDEgICAxNTMwOS44IDM4MDkxIDMxOC43OVxuXG5TdGVwOiAgQUlDPTI5Ni4yMVxuZ2FtYmxlIH4gaW5jb21lICsgc2V4ICsgdmVyYmFsXG5cbiAgICAgICAgIERmIFN1bSBvZiBTcSAgIFJTUyAgICBBSUNcbjxub25lPiAgICAgICAgICAgICAgICAyMTY0MiAyOTYuMjFcbi0gdmVyYmFsICAxICAgIDExMzkuOCAyMjc4MSAyOTYuNjNcbisgc3RhdHVzICAxICAgICAgMTcuOCAyMTYyNCAyOTguMThcbi0gc2V4ICAgICAxICAgIDU3ODcuOSAyNzQyOSAzMDUuMzVcbi0gaW5jb21lICAxICAgMTMyMzYuMSAzNDg3OCAzMTYuNjRcblxuQ2FsbDpcbmxtKGZvcm11bGEgPSBnYW1ibGUgfiBpbmNvbWUgKyBzZXggKyB2ZXJiYWwsIGRhdGEgPSB0ZWVuZ2FtYilcblxuQ29lZmZpY2llbnRzOlxuKEludGVyY2VwdCkgICAgICAgaW5jb21lICAgICAgICAgIHNleCAgICAgICB2ZXJiYWwgIFxuICAgICAyNC4xMzkgICAgICAgIDQuODk4ICAgICAgLTIyLjk2MCAgICAgICAtMi43NDcgIFxuIn0= -->
+<pre><code>Start:  AIC=325.34
+gamble ~ 1
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDciCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMWEKCmBgYHtyfQpkYXRhKHRlZW5nYW1iKQpgYGAKCmBgYHtyfQpmdWxsbW9kZWwgPC0gbG0oZ2FtYmxlIH4gLiwgZGF0YSA9IHRlZW5nYW1iKQpudWxsbW9kZWwgPC0gbG0oZ2FtYmxlIH4gMSwgZGF0YSA9IHRlZW5nYW1iKQpgYGAKCmBgYHtyfQpkcm9wMShmdWxsbW9kZWwsIHNjb3Blfi4sIHRlc3QgPSAiRiIpCmBgYAoKYGBge3J9Cm1vZGVsMiA8LSBsbShnYW1ibGUgfiBzZXggKyBpbmNvbWUgKyB2ZXJiYWwsIGRhdGEgPSB0ZWVuZ2FtYikKZHJvcDEobW9kZWwyLCBzY29wZX4uLCB0ZXN0ID0gIkYiKQpgYGAKCmBgYHtyfQptb2RlbDMgPC0gbG0oZ2FtYmxlIH4gc2V4ICsgaW5jb21lLCBkYXRhID0gdGVlbmdhbWIpCmRyb3AxKG1vZGVsMywgc2NvcGV+LiwgdGVzdCA9ICJGIikKYGBgCgpUYXNrIDFiCgpgYGB7cn0KYWRkMShudWxsbW9kZWwsIHNjb3Blfi4gKyBzZXggKyBzdGF0dXMgKyArIGluY29tZSArIHZlcmJhbCwgdGVzdCA9ICJGIikKYGBgCgpgYGB7cn0KbW9kZWwyIDwtIGxtKGdhbWJsZSB+IGluY29tZSwgZGF0YSA9IHRlZW5nYW1iKQphZGQxKG1vZGVsMiwgc2NvcGV+LiArIHNleCArIHN0YXR1cyArIHZlcmJhbCwgdGVzdCA9ICJGIikKYGBgCgpgYGB7cn0KbW9kZWwzIDwtIGxtKGdhbWJsZSB+IGluY29tZSArIHNleCwgZGF0YSA9IHRlZW5nYW1iKQphZGQxKG1vZGVsMywgc2NvcGV+LiArIHN0YXR1cyArIHZlcmJhbCwgdGVzdCA9ICJGIikKYGBgCg==</div>
+         Df Sum of Sq   RSS    AIC
++ income  1   17680.9 28009 304.34
++ sex     1    7598.4 38091 318.79
++ verbal  1    2212.5 43477 325.00
+&lt;none&gt;                45689 325.34
++ status  1     116.2 45573 327.22
+
+Step:  AIC=304.34
+gamble ~ income
+
+         Df Sum of Sq   RSS    AIC
++ sex     1    5227.3 22781 296.63
+&lt;none&gt;                28009 304.34
++ status  1     719.8 27289 305.11
++ verbal  1     579.1 27429 305.35
+- income  1   17680.9 45689 325.34
+
+Step:  AIC=296.63
+gamble ~ income + sex
+
+         Df Sum of Sq   RSS    AIC
++ verbal  1    1139.8 21642 296.21
+&lt;none&gt;                22781 296.63
++ status  1     201.8 22580 298.21
+- sex     1    5227.3 28009 304.34
+- income  1   15309.8 38091 318.79
+
+Step:  AIC=296.21
+gamble ~ income + sex + verbal
+
+         Df Sum of Sq   RSS    AIC
+&lt;none&gt;                21642 296.21
+- verbal  1    1139.8 22781 296.63
++ status  1      17.8 21624 298.18
+- sex     1    5787.9 27429 305.35
+- income  1   13236.1 34878 316.64
+
+Call:
+lm(formula = gamble ~ income + sex + verbal, data = teengamb)
+
+Coefficients:
+(Intercept)       income          sex       verbal  
+     24.139        4.898      -22.960       -2.747  </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDciCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMWEKCmBgYHtyfQpkYXRhKHRlZW5nYW1iKQpgYGAKCmBgYHtyfQpmdWxsbW9kZWwgPC0gbG0oZ2FtYmxlIH4gLiwgZGF0YSA9IHRlZW5nYW1iKQpudWxsbW9kZWwgPC0gbG0oZ2FtYmxlIH4gMSwgZGF0YSA9IHRlZW5nYW1iKQpgYGAKCmBgYHtyfQpkcm9wMShmdWxsbW9kZWwsIHNjb3Blfi4sIHRlc3QgPSAiRiIpCmBgYAoKYGBge3J9Cm1vZGVsMiA8LSBsbShnYW1ibGUgfiBzZXggKyBpbmNvbWUgKyB2ZXJiYWwsIGRhdGEgPSB0ZWVuZ2FtYikKZHJvcDEobW9kZWwyLCBzY29wZX4uLCB0ZXN0ID0gIkYiKQpgYGAKCmBgYHtyfQptb2RlbDMgPC0gbG0oZ2FtYmxlIH4gc2V4ICsgaW5jb21lLCBkYXRhID0gdGVlbmdhbWIpCmRyb3AxKG1vZGVsMywgc2NvcGV+LiwgdGVzdCA9ICJGIikKYGBgCgpUYXNrIDFiCgpgYGB7cn0KYWRkMShudWxsbW9kZWwsIHNjb3Blfi4gKyBzZXggKyBzdGF0dXMgKyBpbmNvbWUgKyB2ZXJiYWwsIHRlc3QgPSAiRiIpCmBgYAoKYGBge3J9Cm1vZGVsMiA8LSBsbShnYW1ibGUgfiBpbmNvbWUsIGRhdGEgPSB0ZWVuZ2FtYikKYWRkMShtb2RlbDIsIHNjb3Blfi4gKyBzZXggKyBzdGF0dXMgKyB2ZXJiYWwsIHRlc3QgPSAiRiIpCmBgYAoKYGBge3J9Cm1vZGVsMyA8LSBsbShnYW1ibGUgfiBpbmNvbWUgKyBzZXgsIGRhdGEgPSB0ZWVuZ2FtYikKYWRkMShtb2RlbDMsIHNjb3Blfi4gKyBzdGF0dXMgKyB2ZXJiYWwsIHRlc3QgPSAiRiIpCmBgYAoKVGFzayAxYwoKYGBge3J9CnN0ZXAobnVsbG1vZGVsLCBzY29wZSA9IH4uICsgc2V4ICsgc3RhdHVzICsgaW5jb21lICsgdmVyYmFsKQpgYGAK</div>
 
 
 

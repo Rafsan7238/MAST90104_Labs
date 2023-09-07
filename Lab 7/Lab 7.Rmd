@@ -31,7 +31,7 @@ drop1(model3, scope~., test = "F")
 Task 1b
 
 ```{r}
-add1(nullmodel, scope~. + sex + status + + income + verbal, test = "F")
+add1(nullmodel, scope~. + sex + status + income + verbal, test = "F")
 ```
 
 ```{r}
@@ -42,4 +42,10 @@ add1(model2, scope~. + sex + status + verbal, test = "F")
 ```{r}
 model3 <- lm(gamble ~ income + sex, data = teengamb)
 add1(model3, scope~. + status + verbal, test = "F")
+```
+
+Task 1c
+
+```{r}
+step(nullmodel, scope = ~. + sex + status + income + verbal)
 ```
