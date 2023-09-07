@@ -8,3 +8,22 @@ Task 1a
 ```{r}
 data(teengamb)
 ```
+
+```{r}
+fullmodel <- lm(gamble ~ ., data = teengamb)
+nullmodel <- lm(gamble ~ 1, data = teengamb)
+```
+
+```{r}
+drop1(fullmodel, scope~., test = "F")
+```
+
+```{r}
+model2 <- lm(gamble ~ sex + income + verbal, data = teengamb)
+drop1(model2, scope~., test = "F")
+```
+
+```{r}
+model3 <- lm(gamble ~ sex + income, data = teengamb)
+drop1(model3, scope~., test = "F")
+```
