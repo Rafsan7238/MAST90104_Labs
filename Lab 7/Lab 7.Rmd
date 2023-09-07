@@ -99,3 +99,21 @@ null <- lm(Volume ~ Girth, data = trees)
 
 anova(null, model)
 ```
+
+Task 2b
+
+```{r}
+trees$Girth2 <- (trees$Girth)^2
+trees$Girth2Height <- trees$Girth2*trees$Height
+```
+
+```{r}
+X <- matrix(cbind(rep(1, 31), trees$Girth, trees$Height, trees$Girth2, trees$Girth2Height), 31, 5)
+
+X
+```
+
+```{r}
+model2 <- lm(Volume ~ Girth + Height + Girth2 + Girth2Height, data = trees)
+model3 <- step(model2, scope~.)
+```
