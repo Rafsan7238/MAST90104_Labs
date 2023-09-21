@@ -31,5 +31,12 @@ summary(model1)
 ```
 
 ```{r}
-c(1, 0, 0, 0, 0, 1) %*% model1$coefficients
+c(1, 0, 1, 1, 0, 1) %*% model1$coefficients
+```
+
+Task 1e
+
+```{r}
+library(gmodels)
+estimable(model1, c(1, 0, 1, 1, 0, 1), conf.int = 0.95)
 ```
