@@ -52,3 +52,14 @@ data(pima)
 pairs(pima)
 summary(pima)
 ```
+
+Task 2b
+
+```{r}
+model2 <- lm(test ~., data = pima)
+summary(model2)
+```
+
+```{r}
+plot(model2)
+```
