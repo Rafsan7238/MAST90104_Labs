@@ -19,3 +19,7 @@ anova(model1)
 ```
 
 With p-value\>0.05, there is no significance evidence of interaction.
+
+Task 1c
+
+2 degrees of freedom.
