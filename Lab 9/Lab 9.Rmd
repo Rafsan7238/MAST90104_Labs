@@ -40,3 +40,15 @@ Task 1e
 library(gmodels)
 estimable(model1, c(1, 0, 1, 1, 0, 1), conf.int = 0.95)
 ```
+
+Task 2a
+
+```{r}
+library(faraway)
+data(pima)
+```
+
+```{r}
+pairs(pima)
+summary(pima)
+```
