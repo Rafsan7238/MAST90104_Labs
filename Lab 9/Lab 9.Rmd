@@ -23,3 +23,13 @@ With p-value\>0.05, there is no significance evidence of interaction.
 Task 1c
 
 2 degrees of freedom.
+
+Task 1d
+
+```{r}
+summary(model1)
+```
+
+```{r}
+c(1, 0, 0, 0, 0, 1) %*% model1$coefficients
+```

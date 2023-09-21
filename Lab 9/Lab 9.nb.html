@@ -1785,9 +1785,50 @@ Residuals   3 16.730  5.5767               </code></pre>
 interaction.</p>
 <p>Task 1c</p>
 <p>2 degrees of freedom.</p>
+<p>Task 1d</p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShtb2RlbDEpXG5gYGAifQ== -->
+<pre class="r"><code>summary(model1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxubG0oZm9ybXVsYSA9IG1pbGsgfiBkaWV0ICogYnJlZWQsIGRhdGEgPSBtaWxrKVxuXG5SZXNpZHVhbHM6XG4gICAgICAgICAxICAgICAgICAgIDIgICAgICAgICAgMyAgICAgICAgICA0ICAgICAgICAgIDUgICAgICAgICAgNiAgICAgICAgICA3ICAgICAgICAgIDggICAgICAgICAgOSBcbi0xLjIwMGUrMDAgIDEuMjAwZSswMCAgMS4wOTJlLTE2IC0yLjA1MGUrMDAgIDIuMDUwZSswMCAtNS4wMTVlLTE2IC0xLjY1MGUrMDAgIDEuNjUwZSswMCAtMS44NTBlLTE4IFxuXG5Db2VmZmljaWVudHM6XG4gICAgICAgICAgICAgRXN0aW1hdGUgU3RkLiBFcnJvciB0IHZhbHVlIFByKD58dHwpICAgXG4oSW50ZXJjZXB0KSAgICAyMC4wMDAgICAgICAxLjY3MCAgMTEuOTc3ICAwLjAwMTI1ICoqXG5kaWV0MiAgICAgICAgICAtMy4zMDAgICAgICAyLjg5MiAgLTEuMTQxICAwLjMzNjcxICAgXG5kaWV0MyAgICAgICAgICAgMS44NTAgICAgICAyLjM2MSAgIDAuNzgzICAwLjQ5MDU1ICAgXG5icmVlZDIgICAgICAgICAgMi4zMDAgICAgICAyLjg5MiAgIDAuNzk1ICAwLjQ4NDU4ICAgXG5kaWV0MjpicmVlZDIgICAtMS40NTAgICAgICA0LjA5MCAgLTAuMzU1ICAwLjc0NjQyICAgXG5kaWV0MzpicmVlZDIgICAtMi4zNTAgICAgICA0LjA5MCAgLTAuNTc1ICAwLjYwNTg2ICAgXG4tLS1cblNpZ25pZi4gY29kZXM6ICAwIOKAmCoqKuKAmSAwLjAwMSDigJgqKuKAmSAwLjAxIOKAmCrigJkgMC4wNSDigJgu4oCZIDAuMSDigJgg4oCZIDFcblxuUmVzaWR1YWwgc3RhbmRhcmQgZXJyb3I6IDIuMzYxIG9uIDMgZGVncmVlcyBvZiBmcmVlZG9tXG5NdWx0aXBsZSBSLXNxdWFyZWQ6ICAwLjY5NTcsXHRBZGp1c3RlZCBSLXNxdWFyZWQ6ICAwLjE4ODYgXG5GLXN0YXRpc3RpYzogMS4zNzIgb24gNSBhbmQgMyBERiwgIHAtdmFsdWU6IDAuNDIyN1xuIn0= -->
+<pre><code>
+Call:
+lm(formula = milk ~ diet * breed, data = milk)
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDkiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMWEKCmBgYHtyfQptaWxrIDwtIGRhdGEuZnJhbWUobWlsaz1jKDE4LjgsMjEuMiwxNi43LDE5LjgsMjMuOSwyMi4zLDE1LjksMTkuMiwyMS44KSwKZGlldD1mYWN0b3IoYygxLDEsMiwzLDMsMSwyLDIsMykpLApicmVlZD1mYWN0b3IoYygxLDEsMSwxLDEsMiwyLDIsMikpKQpgYGAKClRhc2sgMWIKCmBgYHtyfQptb2RlbDEgPC0gbG0obWlsayB+IGRpZXQgKiBicmVlZCwgZGF0YSA9IG1pbGspCmFub3ZhKG1vZGVsMSkKYGBgCgpXaXRoIHAtdmFsdWVcPjAuMDUsIHRoZXJlIGlzIG5vIHNpZ25pZmljYW5jZSBldmlkZW5jZSBvZiBpbnRlcmFjdGlvbi4KClRhc2sgMWMKCjIgZGVncmVlcyBvZiBmcmVlZG9tLgo=</div>
+Residuals:
+         1          2          3          4          5          6          7          8          9 
+-1.200e+00  1.200e+00  1.092e-16 -2.050e+00  2.050e+00 -5.015e-16 -1.650e+00  1.650e+00 -1.850e-18 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)   
+(Intercept)    20.000      1.670  11.977  0.00125 **
+diet2          -3.300      2.892  -1.141  0.33671   
+diet3           1.850      2.361   0.783  0.49055   
+breed2          2.300      2.892   0.795  0.48458   
+diet2:breed2   -1.450      4.090  -0.355  0.74642   
+diet3:breed2   -2.350      4.090  -0.575  0.60586   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.361 on 3 degrees of freedom
+Multiple R-squared:  0.6957,    Adjusted R-squared:  0.1886 
+F-statistic: 1.372 on 5 and 3 DF,  p-value: 0.4227</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYygxLCAwLCAwLCAwLCAwLCAxKSAlKiUgbW9kZWwxJGNvZWZmaWNpZW50c1xuYGBgIn0= -->
+<pre class="r"><code>c(1, 0, 0, 0, 0, 1) %*% model1$coefficients</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgWywxXVxuWzEsXSAxNy42NVxuIn0= -->
+<pre><code>      [,1]
+[1,] 17.65</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDkiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMWEKCmBgYHtyfQptaWxrIDwtIGRhdGEuZnJhbWUobWlsaz1jKDE4LjgsMjEuMiwxNi43LDE5LjgsMjMuOSwyMi4zLDE1LjksMTkuMiwyMS44KSwKZGlldD1mYWN0b3IoYygxLDEsMiwzLDMsMSwyLDIsMykpLApicmVlZD1mYWN0b3IoYygxLDEsMSwxLDEsMiwyLDIsMikpKQpgYGAKClRhc2sgMWIKCmBgYHtyfQptb2RlbDEgPC0gbG0obWlsayB+IGRpZXQgKiBicmVlZCwgZGF0YSA9IG1pbGspCmFub3ZhKG1vZGVsMSkKYGBgCgpXaXRoIHAtdmFsdWVcPjAuMDUsIHRoZXJlIGlzIG5vIHNpZ25pZmljYW5jZSBldmlkZW5jZSBvZiBpbnRlcmFjdGlvbi4KClRhc2sgMWMKCjIgZGVncmVlcyBvZiBmcmVlZG9tLgoKVGFzayAxZAoKYGBge3J9CnN1bW1hcnkobW9kZWwxKQpgYGAKCmBgYHtyfQpjKDEsIDAsIDAsIDAsIDAsIDEpICUqJSBtb2RlbDEkY29lZmZpY2llbnRzCmBgYAo=</div>
 
 
 
