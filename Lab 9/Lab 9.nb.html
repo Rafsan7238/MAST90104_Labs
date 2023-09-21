@@ -1761,8 +1761,31 @@ diet=factor(c(1,1,2,3,3,1,2,2,3)),
 breed=factor(c(1,1,1,1,1,2,2,2,2)))</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Task 1b</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubW9kZWwxIDwtIGxtKG1pbGsgfiBkaWV0ICogYnJlZWQsIGRhdGEgPSBtaWxrKVxuYW5vdmEobW9kZWwxKVxuYGBgIn0= -->
+<pre class="r"><code>model1 &lt;- lm(milk ~ diet * breed, data = milk)
+anova(model1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiQW5hbHlzaXMgb2YgVmFyaWFuY2UgVGFibGVcblxuUmVzcG9uc2U6IG1pbGtcbiAgICAgICAgICAgRGYgU3VtIFNxIE1lYW4gU3EgRiB2YWx1ZSBQcig+RilcbmRpZXQgICAgICAgIDIgMzQuMjQyIDE3LjEyMTEgIDMuMDcwMSAwLjE4ODBcbmJyZWVkICAgICAgIDEgIDIuMTM2ICAyLjEzNTYgIDAuMzgyOSAwLjU3OThcbmRpZXQ6YnJlZWQgIDIgIDEuODc0ICAwLjkzNzIgIDAuMTY4MSAwLjg1MjdcblJlc2lkdWFscyAgIDMgMTYuNzMwICA1LjU3NjcgICAgICAgICAgICAgICBcbiJ9 -->
+<pre><code>Analysis of Variance Table
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDkiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMWEKCmBgYHtyfQptaWxrIDwtIGRhdGEuZnJhbWUobWlsaz1jKDE4LjgsMjEuMiwxNi43LDE5LjgsMjMuOSwyMi4zLDE1LjksMTkuMiwyMS44KSwKZGlldD1mYWN0b3IoYygxLDEsMiwzLDMsMSwyLDIsMykpLApicmVlZD1mYWN0b3IoYygxLDEsMSwxLDEsMiwyLDIsMikpKQpgYGAK</div>
+Response: milk
+           Df Sum Sq Mean Sq F value Pr(&gt;F)
+diet        2 34.242 17.1211  3.0701 0.1880
+breed       1  2.136  2.1356  0.3829 0.5798
+diet:breed  2  1.874  0.9372  0.1681 0.8527
+Residuals   3 16.730  5.5767               </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>With p-value&gt;0.05, there is no significance evidence of
+interaction.</p>
+<!-- rnb-text-end -->
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDkiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMWEKCmBgYHtyfQptaWxrIDwtIGRhdGEuZnJhbWUobWlsaz1jKDE4LjgsMjEuMiwxNi43LDE5LjgsMjMuOSwyMi4zLDE1LjksMTkuMiwyMS44KSwKZGlldD1mYWN0b3IoYygxLDEsMiwzLDMsMSwyLDIsMykpLApicmVlZD1mYWN0b3IoYygxLDEsMSwxLDEsMiwyLDIsMikpKQpgYGAKClRhc2sgMWIKCmBgYHtyfQptb2RlbDEgPC0gbG0obWlsayB+IGRpZXQgKiBicmVlZCwgZGF0YSA9IG1pbGspCmFub3ZhKG1vZGVsMSkKYGBgCgpXaXRoIHAtdmFsdWVcPjAuMDUsIHRoZXJlIGlzIG5vIHNpZ25pZmljYW5jZSBldmlkZW5jZSBvZiBpbnRlcmFjdGlvbi4K</div>
 
 
 

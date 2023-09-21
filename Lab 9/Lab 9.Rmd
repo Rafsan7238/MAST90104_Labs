@@ -10,3 +10,12 @@ milk <- data.frame(milk=c(18.8,21.2,16.7,19.8,23.9,22.3,15.9,19.2,21.8),
 diet=factor(c(1,1,2,3,3,1,2,2,3)),
 breed=factor(c(1,1,1,1,1,2,2,2,2)))
 ```
+
+Task 1b
+
+```{r}
+model1 <- lm(milk ~ diet * breed, data = milk)
+anova(model1)
+```
+
+With p-value\>0.05, there is no significance evidence of interaction.
