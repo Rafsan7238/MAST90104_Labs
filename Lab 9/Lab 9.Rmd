@@ -74,3 +74,12 @@ summary(model3)
 ```{r}
 exp(0.0897010*(36.6-27.3))-1
 ```
+
+Task 2d
+
+```{r}
+mean_bp_pos <- mean(pima[pima$test == 1, ]$diastolic)
+mean_bp_neg <- mean(pima[pima$test == 0, ]$diastolic)
+
+mean_bp_pos - mean_bp_neg
+```
