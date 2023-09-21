@@ -63,3 +63,14 @@ summary(model2)
 ```{r}
 plot(model2)
 ```
+
+Task 2c
+
+```{r}
+model3 <- glm(test ~., data = pima, family = binomial(link = "logit"))
+summary(model3)
+```
+
+```{r}
+exp(0.0897010*(36.6-27.3))-1
+```
